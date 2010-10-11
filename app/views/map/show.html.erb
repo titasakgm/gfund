@@ -1943,6 +1943,13 @@
             id: 'acc-3'
             ,title: 'รหัสอปท.'
             ,items: panel_lacode
+            ,listeners: {
+              "beforeexpand": function(p) {
+                //Collapse id-chart
+                var chart = Ext.getCmp('id-chart');
+                chart.collapse();
+               }
+            }
           },{
             id: 'acc-4'
             ,title: 'Search Result'
