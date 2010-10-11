@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  prog_lacode: MyString
+  prog_probcode: 1
+  prog_progress: 1
+  prog_resource: 1
+
+two:
+  prog_lacode: MyString
+  prog_probcode: 1
+  prog_progress: 1
+  prog_resource: 1

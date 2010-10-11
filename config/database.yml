@@ -1,0 +1,28 @@
+production:
+  adapter: postgresql
+  database: gfund_production
+  host: localhost
+  username: postgres
+  template: template_postgis
+
+test:
+  adapter: postgresql
+  database: gfund_test
+  host: localhost
+  username: postgres
+  template: template_postgis
+
+development:
+  adapter: postgresql
+  database: gfund_development
+  host: localhost
+  username: postgres
+  template: template_postgis
+
+gfund:
+  adapter: postgresql
+  database: gfund
+  host: localhost
+  username: postgres
+  template: template_postgis
+

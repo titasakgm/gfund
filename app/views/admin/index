@@ -1,0 +1,40 @@
+<html> 
+<head>
+<title>GFUND: Admin</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/mfbase/ext/resources/css/ext-all.css" />
+<script type="text/javascript" src="/mfbase/ext/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="/mfbase/ext/ext-all.js"></script>
+<script language=JavaScript>
+<!--
+//Disable right click script III- By Renigade (renigade@mediaone.net)
+//For full source code, visit http://www.dynamicdrive.com
+
+var message="";
+///////////////////////////////////
+function clickIE() {if (document.all) {(message);return false;}}
+function clickNS(e) {if
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {(message);return false;}}}
+if (document.layers)
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+document.oncontextmenu=new Function("return false")
+// -->
+</script>
+<style>
+.search {
+  background-image:url(/images/find.png) !important;
+  height:20px !important;
+  width:20px !important;
+}
+</style>
+<script type="text/javascript" src="/javascripts/admin.js"></script>
+</head>
+<body>
+<div id="north"></div>
+</body>
+</html>
+
+

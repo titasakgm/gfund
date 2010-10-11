@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <%= stylesheet_link_tag "/mfbase/ext/resources/css/ext-all.css" %>
+  <script type="text/javascript" src="/mfbase/ext/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="/mfbase/ext/ext-all.js"></script>
+
+<!--
+	<%= javascript_include_tag "/javascripts/ext-build.js", :cache => "cache/all" %>
+	<%= javascript_include_tag "/javascripts/ext-build.js" %>
+//-->
+<!--
+  <%= javascript_include_tag "http://203.157.240.7/cachefly/ext-build.js", :cache => "cache/all" %>
+  <%= javascript_include_tag "http://extjs.cachefly.net/builds/ext-cdn-2060.js" %>
+	<link rel="stylesheet" type="text/css" href="/mfbase/ext/resources/css/ext-all.css" />
+  <script type="text/javascript" src="/mfbase/ext/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="/mfbase/ext/ext-all.js"></script>
+//-->
+
+<style>
+#notice {
+  border: 1px solid green;
+  padding: 1em;
+  margin: 1em;
+  margin-bottom: 2em;
+  background-color: lightgray;
+  font: bold smaller sans-serif;
+}
+</style>
+</head>
+<body>
+<%= @content_for_layout %>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# DEFLATE by type - html, text, css, xml
+AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+ 
+# DEFLATE by type - javascript
+AddOutputFilterByType DEFLATE application/x-javascript application/javascript text/javascript text/x-js text/x-javascript
+ 
+# DEFLATE by extension
+AddOutputFilter DEFLATE js css htm html xml

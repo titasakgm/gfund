@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  f_table_catalog: MyString
+  f_table_schema: MyString
+  f_table_name: MyString
+  f_geometry_column: MyString
+  coord_dimension: 
+  srid: 
+  type: MyString
+
+two:
+  f_table_catalog: MyString
+  f_table_schema: MyString
+  f_table_name: MyString
+  f_geometry_column: MyString
+  coord_dimension: 
+  srid: 
+  type: MyString

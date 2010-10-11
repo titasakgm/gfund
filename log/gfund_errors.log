@@ -1,0 +1,55 @@
+[Tue Aug 11 02:23:38 2009] [error] [client 196.3.176.244] script not found or unable to stat: /var/www/cgi-bin/textenv.pl
+[Fri Aug 14 15:02:44 2009] [error] [client 59.67.77.239] script not found or unable to stat: /var/www/cgi-bin/textenv.pl
+[Sun Aug 16 05:57:23 2009] [error] [client 222.189.210.235] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /w00tw00t.at.ISC.SANS.DFind:)
+[Mon Aug 17 03:08:12 2009] [error] [client 59.67.77.239] script not found or unable to stat: /var/www/cgi-bin/textenv.pl
+[Mon Aug 24 16:33:46 2009] [error] [client 222.189.210.235] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /w00tw00t.at.ISC.SANS.DFind:)
+[Thu Sep 17 16:33:26 2009] [error] [client 58.136.28.194] Premature end of script headers: 
+[Thu Sep 17 16:33:30 2009] [error] [client 58.136.28.194] Premature end of script headers: 
+[Thu Sep 17 16:33:32 2009] [error] [client 58.136.28.194] Premature end of script headers: 
+[Thu Sep 24 11:17:05 2009] [error] [client 211.95.78.79] script not found or unable to stat: /var/www/cgi-bin/textenv.pl
+[Thu Sep 24 11:17:05 2009] [error] [client 211.95.78.79] script not found or unable to stat: /var/www/cgi-bin/textenv.pl
+[Tue Sep 29 12:08:04 2009] [error] [client 92.243.182.98] script '/gfund/public/azenv.php' not found or unable to stat
+[Thu Oct 01 15:13:45 2009] [error] [client 192.168.2.1] request failed: error reading the headers
+[Thu Oct 01 15:14:36 2009] [error] [client 192.168.2.1] request failed: error reading the headers
+[Tue Oct 06 11:23:09 2009] [error] [client 125.24.33.56] Premature end of script headers: 
+[Tue Oct 06 11:23:25 2009] [error] [client 125.24.33.56] Premature end of script headers: 
+[Tue Oct 06 11:26:16 2009] [error] [client 125.24.33.56] Premature end of script headers: 
+[Tue Oct 06 11:26:38 2009] [error] [client 125.24.33.56] Premature end of script headers: 
+[Tue Oct 06 11:27:12 2009] [error] [client 125.24.33.56] Premature end of script headers: 
+[Wed Oct 07 21:29:59 2009] [error] [client 218.85.133.212] script not found or unable to stat: /var/www/cgi-bin/textenv.pl
+[Thu Oct 08 22:06:46 2009] [error] [client 61.191.188.169] script not found or unable to stat: /var/www/cgi-bin/textenv.pl
+[Thu Oct 08 22:57:12 2009] [error] [client 61.191.188.169] script not found or unable to stat: /var/www/cgi-bin/textenv.pl
+[Fri Oct 23 15:04:50 2009] [error] [client 61.191.188.169] script not found or unable to stat: /var/www/cgi-bin/textenv.pl
+[Fri Oct 23 17:01:29 2009] [error] [client 61.191.188.169] script not found or unable to stat: /var/www/cgi-bin/textenv.pl
+[Sun Nov 22 13:16:33 2009] [error] [client 121.134.238.129] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /w00tw00t.at.ISC.SANS.DFind:)
+[Fri Dec 18 13:08:37 2009] [error] [client 91.212.127.100] script '/gfund/public/abc.php' not found or unable to stat
+[Sat Dec 19 13:38:25 2009] [error] [client 121.134.238.129] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /w00tw00t.at.ISC.SANS.DFind:)
+[Fri Mar 12 20:29:34 2010] [error] [client 94.179.166.174] script '/gfund/public/azenv.php' not found or unable to stat
+[Mon Mar 22 09:31:22 2010] [error] [client 125.230.70.3] Premature end of script headers: 
+[Mon Mar 22 21:29:34 2010] [error] [client 125.230.70.3] Premature end of script headers: 
+[Tue Mar 23 08:10:44 2010] [error] [client 125.230.70.3] Premature end of script headers: 
+[Sat Apr 03 01:29:55 2010] [error] [client 125.230.70.154] Premature end of script headers: 
+[Sat Apr 03 20:27:26 2010] [error] [client 125.230.70.154] Premature end of script headers: 
+[Sun Apr 04 06:09:16 2010] [error] [client 125.230.70.154] Premature end of script headers: 
+[Sun Apr 11 23:10:59 2010] [error] [client 94.179.170.51] script '/gfund/public/azenv.php' not found or unable to stat
+[Thu Apr 22 21:57:19 2010] [error] [client 92.112.235.202] script '/gfund/public/azenv.php' not found or unable to stat
+[Fri May 07 17:20:22 2010] [error] [client 92.255.156.103] script '/gfund/public/azenv.php' not found or unable to stat
+[Sat May 08 12:42:32 2010] [error] [client 92.255.156.103] script '/gfund/public/azenv.php' not found or unable to stat
+[Mon May 10 01:43:39 2010] [error] [client 92.255.156.103] script '/gfund/public/azenv.php' not found or unable to stat
+[Wed May 12 15:53:21 2010] [error] [client 92.255.135.192] script '/gfund/public/azenv.php' not found or unable to stat
+[Wed May 12 17:29:30 2010] [error] [client 92.255.135.192] script '/gfund/public/azenv.php' not found or unable to stat
+[Mon May 17 17:10:10 2010] [error] [client 92.255.151.61] script '/gfund/public/azenv.php' not found or unable to stat
+[Tue Aug 10 10:06:10 2010] [error] [client 125.141.229.80] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /w00tw00t.at.ISC.SANS.DFind:)
+[Mon Aug 16 08:48:10 2010] [error] [client 125.230.68.93] Premature end of script headers: 
+[Fri Aug 20 21:25:28 2010] [error] [client 124.121.64.224] Premature end of script headers: 
+[Mon Aug 30 02:57:58 2010] [error] [client 125.230.65.158] Premature end of script headers: 
+[Mon Aug 30 08:04:18 2010] [error] [client 125.141.229.80] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /w00tw00t.at.ISC.SANS.DFind:)
+[Thu Sep 02 04:02:01 2010] [error] [client 125.230.72.174] Premature end of script headers: 
+[Sun Sep 12 10:24:07 2010] [error] [client 218.153.5.39] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /w00tw00t.at.ISC.SANS.DFind:)
+[Mon Sep 13 04:02:47 2010] [error] [client 218.153.5.39] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /w00tw00t.at.ISC.SANS.DFind:)
+[Thu Sep 16 02:57:56 2010] [error] [client 125.230.67.18] Premature end of script headers: 
+[Mon Oct 11 16:03:07 2010] [error] [client 202.29.106.110] File does not exist: /gfund-ORIGIN, referer: http://202.176.91.194:8080/map/show/3303
+[Mon Oct 11 16:03:15 2010] [error] [client 202.29.106.110] File does not exist: /gfund-ORIGIN, referer: http://202.176.91.194:8080/map/show/3303
+[Mon Oct 11 16:03:22 2010] [error] [client 202.29.106.110] File does not exist: /gfund-ORIGIN
+[Mon Oct 11 16:03:29 2010] [error] [client 202.29.106.110] File does not exist: /gfund-ORIGIN
+[Mon Oct 11 16:03:33 2010] [error] [client 202.29.106.110] File does not exist: /gfund-ORIGIN
