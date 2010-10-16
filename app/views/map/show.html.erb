@@ -65,7 +65,8 @@
     var cur_problemcode, cur_desc, cur_hotcode, cur_hotdesc;
     var cur_query, cur_icontype, cur_extent;
     var cur_hot_id, cur_risk_code, cur_risk_name, risk_hot_id, risk_hot_code, risk_hot_desc;
-	  var cur_roadid, cur_roadname;
+    var cur_roadid, cur_roadname;
+    var cur_item_search = '';
     var style_hilite, hilite, style_point, style_line, style_resource;
     var myData, store, searchResultGrid;
     var amphoe;
@@ -1762,6 +1763,7 @@
         var progImg = "<img src='http://chart.apis.google.com/chart?";
         progImg += "chs=200x150&chf=bg,s,99ccff&cht=gom&chd=t:" + parseInt(plevel) * 20;
         progImg += "&chl=" + plevel + "&chco=ff0000,ff9900,ffff00,006600&chtt=Progress' />";
+
         var resImg = "<img src='http://chart.apis.google.com/chart?";
         resImg += "chs=200x150&chf=bg,s,99ccff&cht=gom&chd=t:" + parseInt(rlevel) * 20;
         resImg += "&chl=" + rlevel + "&chco=ff0000,ff9900,ffff00,006600&chtt=Resource' />";
@@ -1988,7 +1990,6 @@
             id: 'acc-7'
             ,title: 'Monitoring Progress/Resource'
             ,items: [ panel_lacodemon ]
-          }]
           }]
         },{
           region: 'center'
@@ -2577,11 +2578,27 @@
       
             var buttonCls = new Ext.Toolbar.Button({
               text: 'Search:'
-              ,tooltip: 'Clear search box'
-              ,handler: function() {
-                Ext.get('kw').dom.value = '';
-                Ext.get('kw').focus();
-              }
+              ,id: 'item_search'
+              ,tooltip: 'Select search item'
+              ,menu: [{
+                text: 'LA Code'
+                ,checked: true
+                ,group: 'item'
+                ,handler: function(){
+                  cur_item_search = 'lacode';
+                }
+              },{
+                text: 'Hotspot'
+                ,checked: false
+                ,group: 'item'
+                ,handler: function(){
+                  cur_item_search = 'hotspot';
+                }
+              }]
+              //,handler: function() {
+              //  Ext.get('kw').dom.value = '';
+              //  Ext.get('kw').focus();
+              //}
             });
 
             toolbar.addButton(buttonCls);
