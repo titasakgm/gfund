@@ -5654,3 +5654,7 @@ Migrating to CreateLocalroads (20100321212900)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
   [4;36;1mLadmin Load (10.8ms)[0m   [0;1mselect center(the_geom) from ladmins where id=6599[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mAmphoe Load (0.7ms)[0m   [0;1mSELECT * FROM "amphoes" WHERE ("amphoes"."amp_code" IS NULL AND "amphoes"."amp_pcode" = E'3301') LIMIT 1[0m
+  [4;35;1mAmphoe Load (7.8ms)[0m   [0mSELECT * FROM "amphoes" WHERE ("amphoes"."amp_code" = E'01' AND "amphoes"."amp_pcode" = E'33') LIMIT 1[0m

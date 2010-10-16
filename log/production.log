@@ -12110,3 +12110,2827 @@ Completed in 10ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacod
 Processing MapController#search (for 124.122.202.172 at 2010-10-16 18:07:14) [POST]
   Parameters: {"item"=>"location", "keyword"=>"snook"}
 Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 20:30:39) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 20:31:10) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 26ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 20:31:11) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 159ms (View: 138, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 20:31:57) [GET]
+  Parameters: {"_dc"=>"1287235935519"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287235935519]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 20:31:57) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 20:31:57) [GET]
+  Parameters: {"_dc"=>"1287235935539"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287235935539]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 20:31:57) [GET]
+  Parameters: {"_dc"=>"1287235935522"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287235935522]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 20:31:57) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 20:31:57) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 20:32:05) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"12"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 20:32:52) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"snooker"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 20:36:29) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 20:36:30) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 20:36:37) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 20:36:37) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 167ms (View: 147, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 20:36:40) [GET]
+  Parameters: {"_dc"=>"1287236218424"}
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287236218424]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 20:36:40) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 20:36:40) [GET]
+  Parameters: {"_dc"=>"1287236218433"}
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287236218433]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 20:36:40) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 20:36:40) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 20:36:40) [GET]
+  Parameters: {"_dc"=>"1287236218457"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287236218457]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 20:36:45) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"s"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 20:38:26) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 20:43:24) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 20:43:24) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 20:43:32) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 20:43:32) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 161ms (View: 93, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 20:43:35) [GET]
+  Parameters: {"_dc"=>"1287236633909"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287236633909]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 20:43:35) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 20:43:35) [GET]
+  Parameters: {"_dc"=>"1287236633913"}
+Completed in 23ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287236633913]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 20:43:35) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 20:43:35) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 20:43:35) [GET]
+  Parameters: {"_dc"=>"1287236633929"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287236633929]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 20:43:40) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 20:43:59) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"อ"}
+Completed in 84ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 20:44:20) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"โก"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 20:44:32) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"บาร์"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 20:44:39) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"เบียร์"}
+Completed in 7ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 20:44:50) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"สน"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 20:49:10) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 20:49:11) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 20:49:25) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 20:49:25) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 157ms (View: 137, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 20:49:28) [GET]
+  Parameters: {"_dc"=>"1287236986716"}
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287236986716]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 20:49:28) [GET]
+  Parameters: {"_dc"=>"1287236986719"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287236986719]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 20:49:28) [GET]
+  Parameters: {"_dc"=>"1287236986735"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287236986735]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 20:49:28) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 20:49:28) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 20:49:28) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 20:49:35) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 20:50:00) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"สน"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 21:08:55) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 21:08:56) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 21:09:03) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 21:09:03) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 160ms (View: 93, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:09:05) [GET]
+  Parameters: {"_dc"=>"1287238164367"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287238164367]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 21:09:05) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:09:05) [GET]
+  Parameters: {"_dc"=>"1287238164387"}
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287238164387]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 21:09:05) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 21:09:05) [GET]
+  Parameters: {"_dc"=>"1287238164370"}
+Completed in 23ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287238164370]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 21:09:05) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 11ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:09:12) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"สน"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:09:31) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"สน"}
+Completed in 72ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 21:12:35) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 21:12:35) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 21:12:57) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301\\"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 21:13:02) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 21:13:02) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 158ms (View: 90, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:13:05) [GET]
+  Parameters: {"_dc"=>"1287238404176"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287238404176]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 21:13:05) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 21:13:05) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 21:13:05) [GET]
+  Parameters: {"_dc"=>"1287238404179"}
+Completed in 27ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287238404179]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 21:13:05) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:13:05) [GET]
+  Parameters: {"_dc"=>"1287238404196"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287238404196]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:13:13) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"สน"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 21:15:56) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 21:15:56) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 21:16:08) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 21:16:08) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 158ms (View: 88, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:16:10) [GET]
+  Parameters: {"_dc"=>"1287238589422"}
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287238589422]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 21:16:10) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 21:16:10) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 21:16:10) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 21:16:10) [GET]
+  Parameters: {"_dc"=>"1287238589426"}
+Completed in 28ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287238589426]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:16:10) [GET]
+  Parameters: {"_dc"=>"1287238589442"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287238589442]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:16:15) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"สน"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 21:30:36) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 21:30:36) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 21:30:48) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 21:30:48) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 157ms (View: 88, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:30:51) [GET]
+  Parameters: {"_dc"=>"1287239469691"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287239469691]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 21:30:51) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 21:30:51) [GET]
+  Parameters: {"_dc"=>"1287239469695"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287239469695]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 21:30:51) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 21:30:51) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 11ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:30:51) [GET]
+  Parameters: {"_dc"=>"1287239469711"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287239469711]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:30:59) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"สน", "ampcode"=>"3301"}
+
+PGError (ERROR:  column "ampgeom" does not exist
+LINE 1: ... AND the_geom IS NOT NULL AND intersects(the_geom, ampgeom) 
+                                                              ^
+):
+  app/controllers/map_controller.rb:710:in `exec'
+  app/controllers/map_controller.rb:710:in `search'
+  passenger (2.2.4) lib/phusion_passenger/rack/request_handler.rb:91:in `process_request'
+  passenger (2.2.4) lib/phusion_passenger/abstract_request_handler.rb:206:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:376:in `start_request_handler'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/utils.rb:182:in `safe_fork'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:162:in `start'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:261:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:286:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+
+Rendering /gfund/public/500.html (500 Internal Server Error)
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:32:34) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"สน", "ampcode"=>"3301"}
+Completed in 39ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:33:16) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"หื", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:33:25) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:33:49) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"ส", "ampcode"=>"3301"}
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:33:55) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"s", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:34:07) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:34:58) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 21:35:18) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 21:35:18) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 21:35:24) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 21:35:24) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 156ms (View: 87, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:35:27) [GET]
+  Parameters: {"_dc"=>"1287239745817"}
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287239745817]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 21:35:27) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:35:27) [GET]
+  Parameters: {"_dc"=>"1287239745848"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287239745848]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 21:35:27) [GET]
+  Parameters: {"_dc"=>"1287239745826"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287239745826]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 21:35:27) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 21:35:27) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:35:32) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:35:42) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"ส", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:35:48) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 21:38:44) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 21:38:45) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 21:38:54) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 21:38:54) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 157ms (View: 137, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:38:57) [GET]
+  Parameters: {"_dc"=>"1287239956009"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287239956009]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 21:38:57) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 7ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:38:57) [GET]
+  Parameters: {"_dc"=>"1287239956040"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287239956040]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 21:38:57) [GET]
+  Parameters: {"_dc"=>"1287239956018"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287239956018]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 21:38:57) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 21:38:57) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:39:03) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"s", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:39:11) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"1", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:39:19) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"s", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:39:24) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"123", "ampcode"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:39:32) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"a", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 21:40:53) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 21:40:53) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 21:40:59) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 21:40:59) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 157ms (View: 90, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:41:02) [GET]
+  Parameters: {"_dc"=>"1287240081413"}
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287240081413]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 21:41:02) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:41:02) [GET]
+  Parameters: {"_dc"=>"1287240081440"}
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287240081440]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 21:41:02) [GET]
+  Parameters: {"_dc"=>"1287240081418"}
+Completed in 25ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287240081418]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 21:41:02) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 21:41:02) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:41:07) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"a", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:41:14) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:41:18) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"a", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:41:23) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 73ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:41:25) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:45:46) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:46:08) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:47:23) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#get_location (for 124.122.202.172 at 2010-10-16 21:47:54) [POST]
+  Parameters: {"extent"=>"103.583617,14.8836,105.109344,15.463129", "hotcode"=>"0"}
+Completed in 26ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_location]
+
+
+Processing MapController#get_location (for 124.122.202.172 at 2010-10-16 21:48:00) [POST]
+  Parameters: {"extent"=>"103.583617,14.8836,105.109344,15.463129", "hotcode"=>"2"}
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_location]
+
+
+Processing MapController#get_location (for 124.122.202.172 at 2010-10-16 21:48:01) [POST]
+  Parameters: {"extent"=>"103.583617,14.8836,105.109344,15.463129", "hotcode"=>"3"}
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_location]
+
+
+Processing MapController#get_location (for 124.122.202.172 at 2010-10-16 21:48:03) [POST]
+  Parameters: {"extent"=>"103.583617,14.8836,105.109344,15.463129", "hotcode"=>"4"}
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_location]
+
+
+Processing MapController#get_location (for 124.122.202.172 at 2010-10-16 21:48:04) [POST]
+  Parameters: {"extent"=>"103.583617,14.8836,105.109344,15.463129", "hotcode"=>"5"}
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_location]
+
+
+Processing MapController#get_location (for 124.122.202.172 at 2010-10-16 21:48:05) [POST]
+  Parameters: {"extent"=>"103.583617,14.8836,105.109344,15.463129", "hotcode"=>"6"}
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_location]
+
+
+Processing MapController#get_location (for 124.122.202.172 at 2010-10-16 21:48:06) [POST]
+  Parameters: {"extent"=>"103.583617,14.8836,105.109344,15.463129", "hotcode"=>"7"}
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_location]
+
+
+Processing MapController#hot_delete (for 124.122.202.172 at 2010-10-16 21:48:32) [POST]
+  Parameters: {"id"=>"158"}
+Completed in 74ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/hot_delete]
+
+
+Processing MapController#get_location (for 124.122.202.172 at 2010-10-16 21:48:38) [POST]
+  Parameters: {"extent"=>"103.583617,14.8836,105.109344,15.463129", "hotcode"=>"6"}
+Completed in 44ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_location]
+
+
+Processing MapController#get_location (for 124.122.202.172 at 2010-10-16 21:48:39) [POST]
+  Parameters: {"extent"=>"103.583617,14.8836,105.109344,15.463129", "hotcode"=>"7"}
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_location]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:49:00) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:54:49) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:54:57) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+
+PGError (ERROR:  function to_char(character varying, unknown) does not exist
+LINE 1: ...eom) FROM ladmins WHERE upper(to_char(id,'9999')||to_char(la...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+):
+  app/controllers/map_controller.rb:653:in `exec'
+  app/controllers/map_controller.rb:653:in `search'
+  passenger (2.2.4) lib/phusion_passenger/rack/request_handler.rb:91:in `process_request'
+  passenger (2.2.4) lib/phusion_passenger/abstract_request_handler.rb:206:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:376:in `start_request_handler'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/utils.rb:182:in `safe_fork'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:162:in `start'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:261:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:286:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+
+Rendering /gfund/public/500.html (500 Internal Server Error)
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 21:56:44) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 21:56:44) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 21:56:51) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 21:56:51) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 168ms (View: 148, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:56:54) [GET]
+  Parameters: {"_dc"=>"1287241033093"}
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287241033093]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 21:56:54) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:56:54) [GET]
+  Parameters: {"_dc"=>"1287241033114"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287241033114]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 21:56:54) [GET]
+  Parameters: {"_dc"=>"1287241033097"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287241033097]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 21:56:54) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 21:56:54) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:56:57) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:57:08) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:57:13) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"111", "ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:57:23) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 21:59:25) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 21:59:25) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 21:59:31) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 21:59:31) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 162ms (View: 89, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:59:34) [GET]
+  Parameters: {"_dc"=>"1287241192989"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287241192989]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 21:59:34) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 21:59:34) [GET]
+  Parameters: {"_dc"=>"1287241192993"}
+Completed in 27ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287241192993]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 21:59:34) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 11ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 21:59:34) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 23ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 21:59:34) [GET]
+  Parameters: {"_dc"=>"1287241193009"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287241193009]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:59:37) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:59:51) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 21:59:59) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"111", "ampcode"=>"3301"}
+Completed in 64ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:00:05) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:00:10) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 22:01:15) [POST]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 22:01:16) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 22:01:23) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 22:01:23) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 110ms (View: 92, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:01:26) [GET]
+  Parameters: {"_dc"=>"1287241305201"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287241305201]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 22:01:26) [GET]
+  Parameters: {"_dc"=>"1287241305212"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287241305212]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 22:01:26) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 22:01:26) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:01:26) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:01:26) [GET]
+  Parameters: {"_dc"=>"1287241305228"}
+Completed in 59ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287241305228]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:01:34) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:01:42) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"111", "ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:01:50) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:02:00) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:02:11) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 22:02:56) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 113ms (View: 94, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:03:02) [GET]
+  Parameters: {"_dc"=>"1287241401165"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287241401165]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 22:03:02) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 7ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 22:03:02) [GET]
+  Parameters: {"_dc"=>"1287241401169"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287241401169]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:03:02) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 22:03:02) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:03:02) [GET]
+  Parameters: {"_dc"=>"1287241401186"}
+Completed in 67ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287241401186]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:03:10) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:03:18) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:03:27) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 22:08:43) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 22:08:43) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 22:08:51) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 22:08:52) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 159ms (View: 139, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:08:54) [GET]
+  Parameters: {"_dc"=>"1287241753585"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287241753585]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 22:08:54) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:08:54) [GET]
+  Parameters: {"_dc"=>"1287241753605"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287241753605]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 22:08:54) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 22:08:54) [GET]
+  Parameters: {"_dc"=>"1287241753589"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287241753589]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:08:54) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:09:00) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:09:05) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"111", "ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:09:11) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:09:18) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:09:22) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:09:28) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:09:30) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:09:36) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:09:42) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 22:11:14) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 22:11:14) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 22:11:27) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 22:11:27) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 169ms (View: 92, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:11:30) [GET]
+  Parameters: {"_dc"=>"1287241908980"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287241908980]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 22:11:30) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:11:30) [GET]
+  Parameters: {"_dc"=>"1287241909010"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287241909010]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 22:11:30) [GET]
+  Parameters: {"_dc"=>"1287241908988"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287241908988]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 22:11:30) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:11:30) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:13:02) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:13:06) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"111", "ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:13:11) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:13:15) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:13:20) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"111", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:13:27) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:13:29) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 22:15:23) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 22:15:24) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 22:15:30) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 22:15:30) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 155ms (View: 89, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:15:33) [GET]
+  Parameters: {"_dc"=>"1287242152062"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287242152062]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 22:15:33) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:15:33) [GET]
+  Parameters: {"_dc"=>"1287242152088"}
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287242152088]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 22:15:33) [GET]
+  Parameters: {"_dc"=>"1287242152067"}
+Completed in 24ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287242152067]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 22:15:33) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:15:33) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:15:37) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:15:42) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"1", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:15:49) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:15:54) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 61ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:16:01) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:16:08) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:16:10) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:16:14) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"111", "ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:16:19) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:16:33) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"2", "ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:16:41) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:16:46) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:19:29) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#add_hotspot (for 124.122.202.172 at 2010-10-16 22:19:52) [POST]
+  Parameters: {"hot_date"=>"", "hot_loc_id"=>"0", "hot_geometry"=>"POINT(104.34648059082 15.1733648681641)", "hotcode"=>"", "hot_description"=>"aaaaa"}
+Completed in 95ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/add_hotspot]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:19:57) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"sn", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:20:02) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"722", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:20:04) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"722", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:20:05) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"722", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:20:11) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"aaa", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 22:28:18) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 22:28:18) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 22:28:23) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 22:28:23) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 167ms (View: 147, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:28:26) [GET]
+  Parameters: {"_dc"=>"1287242925211"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287242925211]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 22:28:26) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:28:26) [GET]
+  Parameters: {"_dc"=>"1287242925240"}
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287242925240]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 22:28:26) [GET]
+  Parameters: {"_dc"=>"1287242925218"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287242925218]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 22:28:26) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:28:26) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:28:34) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 22:29:44) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 22:29:44) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 22:29:50) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 22:29:50) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 165ms (View: 93, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:29:53) [GET]
+  Parameters: {"_dc"=>"1287243012120"}
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287243012120]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 22:29:53) [GET]
+  Parameters: {"_dc"=>"1287243012128"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287243012128]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:29:53) [GET]
+  Parameters: {"_dc"=>"1287243012150"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287243012150]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 22:29:53) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:29:53) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 22:29:53) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:29:58) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 22:37:56) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 22:37:56) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 22:38:03) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 22:38:03) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 160ms (View: 140, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:38:06) [GET]
+  Parameters: {"_dc"=>"1287243505043"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287243505043]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:38:06) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 22:38:06) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 22:38:06) [GET]
+  Parameters: {"_dc"=>"1287243505048"}
+Completed in 25ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287243505048]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 22:38:06) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:38:06) [GET]
+  Parameters: {"_dc"=>"1287243505069"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287243505069]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:38:11) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 22:43:15) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 22:43:15) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 22:43:21) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 22:43:21) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 161ms (View: 141, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:43:24) [GET]
+  Parameters: {"_dc"=>"1287243823470"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287243823470]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 22:43:24) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 25ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 22:43:24) [GET]
+  Parameters: {"_dc"=>"1287243823478"}
+Completed in 27ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287243823478]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 22:43:24) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:43:24) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 25ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:43:24) [GET]
+  Parameters: {"_dc"=>"1287243823499"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287243823499]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:43:36) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:44:06) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 22:46:55) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 22:46:55) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 22:47:01) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 22:47:01) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 159ms (View: 91, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:47:04) [GET]
+  Parameters: {"_dc"=>"1287244043510"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287244043510]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 22:47:04) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:47:04) [GET]
+  Parameters: {"_dc"=>"1287244043541"}
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287244043541]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 22:47:04) [GET]
+  Parameters: {"_dc"=>"1287244043519"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287244043519]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 22:47:04) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:47:04) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:47:09) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 22:48:36) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 22:48:37) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 22:48:43) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 22:48:43) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 170ms (View: 96, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:48:46) [GET]
+  Parameters: {"_dc"=>"1287244145394"}
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287244145394]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 22:48:46) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 22:48:46) [GET]
+  Parameters: {"_dc"=>"1287244145424"}
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287244145424]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 22:48:46) [GET]
+  Parameters: {"_dc"=>"1287244145402"}
+Completed in 23ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287244145402]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 22:48:46) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 22:48:46) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 22:48:52) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"722", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 23:04:05) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 23:04:05) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 23:04:11) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 23:04:11) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 161ms (View: 91, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 23:07:22) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 164ms (View: 145, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 23:16:24) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 165ms (View: 142, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 23:17:32) [GET]
+  Parameters: {"_dc"=>"1287245871511"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287245871511]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 23:17:32) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 23:17:32) [GET]
+  Parameters: {"_dc"=>"1287245871539"}
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287245871539]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 23:17:32) [GET]
+  Parameters: {"_dc"=>"1287245871517"}
+Completed in 24ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287245871517]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 23:17:32) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 23:17:32) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 23:17:39) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 23:26:15) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 23:26:15) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 23:26:22) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 23:26:22) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 161ms (View: 141, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 23:26:25) [GET]
+  Parameters: {"_dc"=>"1287246404285"}
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287246404285]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 23:26:25) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 7ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 23:26:25) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 23:26:25) [GET]
+  Parameters: {"_dc"=>"1287246404296"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287246404296]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 23:26:25) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 23:26:25) [GET]
+  Parameters: {"_dc"=>"1287246404313"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287246404313]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 23:26:29) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 23:30:44) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 23:30:44) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 23:30:53) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 23:30:53) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 165ms (View: 99, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 23:30:56) [GET]
+  Parameters: {"_dc"=>"1287246675717"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287246675717]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 23:30:56) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 23:30:56) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 23:30:56) [GET]
+  Parameters: {"_dc"=>"1287246675714"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287246675714]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 23:30:56) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 23:30:56) [GET]
+  Parameters: {"_dc"=>"1287246675735"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287246675735]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 23:31:01) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#edit_location (for 124.122.202.172 at 2010-10-16 23:31:39) [POST]
+  Parameters: {"cur_loc_id"=>"722", "loc_code"=>"2", "loc_date"=>"2010-10-16", "loc_desc"=>"Snooker 2"}
+
+TypeError (can't convert nil into String):
+  /usr/lib/ruby/gems/1.8/gems/GeoRuby-1.3.4/lib/geo_ruby/simple_features/ewkt_parser.rb:295:in `initialize'
+  /usr/lib/ruby/gems/1.8/gems/GeoRuby-1.3.4/lib/geo_ruby/simple_features/ewkt_parser.rb:295:in `new'
+  /usr/lib/ruby/gems/1.8/gems/GeoRuby-1.3.4/lib/geo_ruby/simple_features/ewkt_parser.rb:295:in `initialize'
+  /usr/lib/ruby/gems/1.8/gems/GeoRuby-1.3.4/lib/geo_ruby/simple_features/ewkt_parser.rb:46:in `new'
+  /usr/lib/ruby/gems/1.8/gems/GeoRuby-1.3.4/lib/geo_ruby/simple_features/ewkt_parser.rb:46:in `parse'
+  /usr/lib/ruby/gems/1.8/gems/GeoRuby-1.3.4/lib/geo_ruby/simple_features/geometry.rb:157:in `from_ewkt'
+  app/controllers/map_controller.rb:408:in `edit_location'
+  passenger (2.2.4) lib/phusion_passenger/rack/request_handler.rb:91:in `process_request'
+  passenger (2.2.4) lib/phusion_passenger/abstract_request_handler.rb:206:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:376:in `start_request_handler'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/utils.rb:182:in `safe_fork'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:162:in `start'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:261:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:286:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+
+Rendering /gfund/public/500.html (500 Internal Server Error)
+
+
+Processing MapController#edit_location (for 124.122.202.172 at 2010-10-16 23:31:58) [POST]
+  Parameters: {"cur_loc_id"=>"722", "loc_code"=>"2", "loc_date"=>"2010-10-16", "loc_desc"=>"Snooker 2"}
+
+TypeError (can't convert nil into String):
+  /usr/lib/ruby/gems/1.8/gems/GeoRuby-1.3.4/lib/geo_ruby/simple_features/ewkt_parser.rb:295:in `initialize'
+  /usr/lib/ruby/gems/1.8/gems/GeoRuby-1.3.4/lib/geo_ruby/simple_features/ewkt_parser.rb:295:in `new'
+  /usr/lib/ruby/gems/1.8/gems/GeoRuby-1.3.4/lib/geo_ruby/simple_features/ewkt_parser.rb:295:in `initialize'
+  /usr/lib/ruby/gems/1.8/gems/GeoRuby-1.3.4/lib/geo_ruby/simple_features/ewkt_parser.rb:46:in `new'
+  /usr/lib/ruby/gems/1.8/gems/GeoRuby-1.3.4/lib/geo_ruby/simple_features/ewkt_parser.rb:46:in `parse'
+  /usr/lib/ruby/gems/1.8/gems/GeoRuby-1.3.4/lib/geo_ruby/simple_features/geometry.rb:157:in `from_ewkt'
+  app/controllers/map_controller.rb:408:in `edit_location'
+  passenger (2.2.4) lib/phusion_passenger/rack/request_handler.rb:91:in `process_request'
+  passenger (2.2.4) lib/phusion_passenger/abstract_request_handler.rb:206:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:376:in `start_request_handler'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/utils.rb:182:in `safe_fork'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:162:in `start'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:261:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:286:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+
+Rendering /gfund/public/500.html (500 Internal Server Error)
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 23:46:37) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 23:46:37) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 23:46:43) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 23:46:43) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 161ms (View: 141, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 23:46:46) [GET]
+  Parameters: {"_dc"=>"1287247625829"}
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287247625829]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 23:46:46) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 23:46:46) [GET]
+  Parameters: {"_dc"=>"1287247625859"}
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287247625859]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 23:46:46) [GET]
+  Parameters: {"_dc"=>"1287247625837"}
+Completed in 23ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287247625837]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 23:46:46) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 23:46:46) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 23:46:51) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#edit_location (for 124.122.202.172 at 2010-10-16 23:47:15) [POST]
+  Parameters: {"loc_code"=>"2", "loc_date"=>"2010-10-16", "loc_id"=>"722", "loc_desc"=>"Snooker 222"}
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/edit_location]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 23:47:22) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#edit_location (for 124.122.202.172 at 2010-10-16 23:47:32) [POST]
+  Parameters: {"loc_code"=>"2", "loc_date"=>"", "loc_id"=>"722", "loc_desc"=>"Snooker 2"}
+Completed in 80ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/edit_location]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 23:47:37) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 23:55:11) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 23:55:11) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 23:55:19) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 23:55:19) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 162ms (View: 142, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 23:55:22) [GET]
+  Parameters: {"_dc"=>"1287248141882"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287248141882]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 23:55:22) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 23:55:22) [GET]
+  Parameters: {"_dc"=>"1287248141909"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287248141909]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 23:55:22) [GET]
+  Parameters: {"_dc"=>"1287248141887"}
+Completed in 24ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287248141887]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 23:55:22) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 23:55:22) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 23:55:27) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 23:56:37) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-16 23:56:38) [POST]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-16 23:56:38) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-16 23:56:45) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 23:56:45) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 151ms (View: 90, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 23:56:48) [GET]
+  Parameters: {"_dc"=>"1287248227395"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287248227395]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 23:56:48) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 23:56:48) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 23:56:48) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 23:56:48) [GET]
+  Parameters: {"_dc"=>"1287248227400"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287248227400]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 23:56:48) [GET]
+  Parameters: {"_dc"=>"1287248227422"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287248227422]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 23:56:52) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 23:57:13) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-17 00:07:06) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-17 00:07:06) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-17 00:07:13) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-17 00:07:13) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 172ms (View: 151, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-17 00:07:15) [GET]
+  Parameters: {"_dc"=>"1287248855280"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287248855280]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-17 00:07:15) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-17 00:07:15) [GET]
+  Parameters: {"_dc"=>"1287248855285"}
+Completed in 26ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287248855285]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-17 00:07:16) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-17 00:07:16) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-17 00:07:16) [GET]
+  Parameters: {"_dc"=>"1287248855307"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287248855307]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:07:21) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#delete_location (for 124.122.202.172 at 2010-10-17 00:07:26) [POST]
+  Parameters: {"loc_id"=>"722"}
+Completed in 60ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/delete_location]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:07:30) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:07:36) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:07:44) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113", "ampcode"=>"3301"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:07:51) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:08:03) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:27:28) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:27:33) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-17 00:33:55) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-17 00:33:55) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-17 00:34:01) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-17 00:34:02) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 159ms (View: 92, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-17 00:34:05) [GET]
+  Parameters: {"_dc"=>"1287250464550"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287250464550]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-17 00:34:05) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-17 00:34:05) [GET]
+  Parameters: {"_dc"=>"1287250464576"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287250464576]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-17 00:34:05) [GET]
+  Parameters: {"_dc"=>"1287250464554"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287250464554]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-17 00:34:05) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-17 00:34:05) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:34:10) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-17 00:34:27) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#add_hotspot (for 124.122.202.172 at 2010-10-17 00:34:46) [POST]
+  Parameters: {"hot_date"=>"2010-10-17", "hot_loc_id"=>"0", "hot_geometry"=>"POINT(104.31722766113282 15.184457397460937)", "hotcode"=>"2", "hot_description"=>"Snooker 123"}
+Completed in 133ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/add_hotspot]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:34:55) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"22", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:35:01) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"123", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#edit_location (for 124.122.202.172 at 2010-10-17 00:35:16) [POST]
+  Parameters: {"loc_code"=>"2", "loc_date"=>"", "loc_id"=>"732", "loc_desc"=>"Snooker 12345"}
+Completed in 51ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/edit_location]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:35:20) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"123", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#delete_location (for 124.122.202.172 at 2010-10-17 00:35:26) [POST]
+  Parameters: {"loc_id"=>"732"}
+Completed in 70ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/delete_location]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:35:30) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"123", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:35:41) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"123", "ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-17 00:38:19) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-17 00:38:19) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-17 00:38:26) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-17 00:38:26) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 159ms (View: 139, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-17 00:38:29) [GET]
+  Parameters: {"_dc"=>"1287250729176"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287250729176]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-17 00:38:29) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-17 00:38:29) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-17 00:38:29) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-17 00:38:29) [GET]
+  Parameters: {"_dc"=>"1287250729185"}
+Completed in 26ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287250729185]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-17 00:38:29) [GET]
+  Parameters: {"_dc"=>"1287250729207"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287250729207]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:38:34) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"123", "ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:38:39) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"123", "ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:38:44) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"1", "ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-17 00:38:58) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#add_hotspot (for 124.122.202.172 at 2010-10-17 00:39:09) [POST]
+  Parameters: {"hot_date"=>"", "hot_loc_id"=>"0", "hot_geometry"=>"POINT(104.32821398925782 14.988076782226562)", "hotcode"=>"3", "hot_description"=>"Agogo 11111"}
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/add_hotspot]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:39:14) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"1", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#delete_location (for 124.122.202.172 at 2010-10-17 00:39:27) [POST]
+  Parameters: {"loc_id"=>"733"}
+Completed in 39ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/delete_location]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:39:30) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"1", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-17 00:43:23) [POST]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-17 00:43:24) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing MapController#login (for 124.122.202.172 at 2010-10-17 00:43:30) [POST]
+  Parameters: {"user"=>"3301", "pass"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/login]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-17 00:43:30) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 168ms (View: 100, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-17 00:43:33) [GET]
+  Parameters: {"_dc"=>"1287251033284"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287251033284]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-17 00:43:33) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-17 00:43:33) [GET]
+  Parameters: {"_dc"=>"1287251033311"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287251033311]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-17 00:43:33) [GET]
+  Parameters: {"_dc"=>"1287251033289"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287251033289]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-17 00:43:33) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-17 00:43:33) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:43:59) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"111", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:44:03) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"1", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-17 00:44:11) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#add_hotspot (for 124.122.202.172 at 2010-10-17 00:44:26) [POST]
+  Parameters: {"hot_date"=>"", "hot_loc_id"=>"0", "hot_geometry"=>"POINT(104.42297106933594 15.170724487304687)", "hotcode"=>"10", "hot_description"=>"aaaa bbbb cccc"}
+Completed in 88ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/add_hotspot]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:44:30) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"aaa", "ampcode"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:44:40) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"23", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:44:44) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"2", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:44:49) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"2", "ampcode"=>"3301"}
+Completed in 64ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:44:52) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"2", "ampcode"=>"3301"}
+Completed in 80ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:44:54) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"2", "ampcode"=>"3301"}
+Completed in 66ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:45:01) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"2", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-17 00:45:13) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#add_hotspot (for 124.122.202.172 at 2010-10-17 00:45:29) [POST]
+  Parameters: {"hot_date"=>"2010-10-17", "hot_loc_id"=>"0", "hot_geometry"=>"POINT(104.30898791503907 15.187203979492187)", "hotcode"=>"2", "hot_description"=>"Snooker 12345"}
+Completed in 48ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/add_hotspot]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:45:33) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"2", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:45:38) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"2", "ampcode"=>"3301"}
+Completed in 78ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:45:46) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"2", "ampcode"=>"3301"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#delete_location (for 124.122.202.172 at 2010-10-17 00:46:01) [POST]
+  Parameters: {"loc_id"=>"735"}
+Completed in 69ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/delete_location]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:46:04) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"2", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:47:56) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"2", "ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#get_riskmap (for 124.122.202.172 at 2010-10-17 00:48:18) [POST]
+  Parameters: {"extent"=>"104.268905,15.16609,104.459621,15.238531", "riskcode"=>"1", "ampcode"=>"3301"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_riskmap]
+
+
+Processing MapController#get_location (for 124.122.202.172 at 2010-10-17 00:48:22) [POST]
+  Parameters: {"extent"=>"104.268905,15.16609,104.459621,15.238531", "hotcode"=>"0"}
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_location]
+
+
+Processing MapController#get_riskmap (for 124.122.202.172 at 2010-10-17 00:48:27) [POST]
+  Parameters: {"extent"=>"104.305984,15.126093,104.4967,15.198534", "riskcode"=>"1", "ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_riskmap]
+
+
+Processing MapController#get_riskmap (for 124.122.202.172 at 2010-10-17 00:48:31) [POST]
+  Parameters: {"extent"=>"104.340831,15.126093,104.531547,15.198534", "riskcode"=>"1", "ampcode"=>"3301"}
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_riskmap]
+
+
+Processing MapController#get_riskmap (for 124.122.202.172 at 2010-10-17 00:48:33) [POST]
+  Parameters: {"extent"=>"104.393016,15.120771,104.583732,15.193212", "riskcode"=>"1", "ampcode"=>"3301"}
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_riskmap]
+
+
+Processing MapController#get_riskmap (for 124.122.202.172 at 2010-10-17 00:48:34) [POST]
+  Parameters: {"extent"=>"104.367782,15.095365,104.558498,15.167806", "riskcode"=>"1", "ampcode"=>"3301"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_riskmap]
+
+
+Processing MapController#get_riskmap (for 124.122.202.172 at 2010-10-17 00:48:36) [POST]
+  Parameters: {"extent"=>"104.390613,15.08867,104.581329,15.161111", "riskcode"=>"1", "ampcode"=>"3301"}
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_riskmap]
+
+
+Processing MapController#get_riskmap (for 124.122.202.172 at 2010-10-17 00:48:37) [POST]
+  Parameters: {"extent"=>"104.393531,15.100343,104.584247,15.172784", "riskcode"=>"1", "ampcode"=>"3301"}
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_riskmap]
+
+
+Processing MapController#get_riskmap (for 124.122.202.172 at 2010-10-17 00:48:37) [POST]
+  Parameters: {"extent"=>"104.393531,15.104463,104.584247,15.176904", "riskcode"=>"1", "ampcode"=>"3301"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_riskmap]
+
+
+Processing MapController#get_riskmap (for 124.122.202.172 at 2010-10-17 00:49:02) [POST]
+  Parameters: {"extent"=>"104.391986,15.104635,104.582702,15.177076", "riskcode"=>"1", "ampcode"=>"3301"}
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_riskmap]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-17 00:49:18) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"เกม", "ampcode"=>"3301"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#logout (for 124.122.202.172 at 2010-10-17 00:49:28) [POST]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/logout]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-17 00:49:29) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://202.176.91.194/user]
+
+
+Processing UserController#profile (for 124.122.202.172 at 2010-10-17 00:49:33) [GET]
+Rendering template within layouts/ext
+Rendering user/profile
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://202.176.91.194/user/profile/]

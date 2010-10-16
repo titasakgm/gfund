@@ -387,7 +387,7 @@ class MapController < ApplicationController
     render :text => data.to_json, :layout => false
   end
 
-	def save_line
+  def save_line
     lroad_id = params[:slf_roadid]
     lroad_name = params[:slf_roadname]
     geometry = GeoRuby::SimpleFeatures::Geometry.from_ewkt(params[:slf_geometry])
@@ -395,8 +395,34 @@ class MapController < ApplicationController
 
     lroad = Localroad.create(:lroad_name => lroad_name, :the_geom => geometry)
     lroad_id = lroad.id		  
-  	data = { :success => true, :lroad_id => lroad_id, :msg => "1 record added" }
+    data = { :success => true, :lroad_id => lroad_id, :msg => "1 record added" }
     
+    headers["Content-Type"] = "text/plain; charset=utf-8"
+    render :text => data.to_json, :layout => false
+  end
+
+  def delete_location
+    id = params[:loc_id]
+    loc = Location.find(id)
+    loc.destroy
+    data = { :success => true, :msg => "1 record deleted!" }
+    render :text => data.to_json, :layout => false
+  end
+
+  def edit_location
+    id = params[:loc_id]
+    code = params[:loc_code]
+    desc = params[:loc_desc]
+    date = params[:loc_date]
+
+    loc = Location.find(id)
+    loc.update_attributes(:loc_code => code, :loc_desc => desc)
+
+    data = Hash.new
+    data[:success] = 'true'
+    data[:msg] = '1 Record updated'
+    data[:id] = id
+
     headers["Content-Type"] = "text/plain; charset=utf-8"
     render :text => data.to_json, :layout => false
   end
@@ -636,6 +662,7 @@ class MapController < ApplicationController
   def search
     keyword = params[:keyword]
     item = params[:item]
+    ampcode = params[:ampcode]
 
     if (item == 'ladmin')
       con = PGconn.connect("localhost",5432,nil,nil,"gfund","postgres")
@@ -645,7 +672,7 @@ class MapController < ApplicationController
       if (keyword =~ /POLYGON/)
         sql += "WHERE intersects(the_geom, GeometryFromText('#{keyword}',4326)) "
       else
-        sql += "WHERE upper(to_char(id,'9999')||to_char(la_code,'9999')||la_name) LIKE '%#{keyword.upcase}%' "
+        sql += "WHERE upper(id||la_code||la_name) LIKE '%#{keyword.upcase}%' "
       end
       sql += "AND the_geom IS NOT NULL "
 
@@ -690,6 +717,11 @@ class MapController < ApplicationController
       data[:msg] = msg
     elsif (item == 'location')
       con = PGconn.connect("localhost",5432,nil,nil,"gfund","postgres")
+      sql = "SELECT the_geom FROM amphoes "
+      sql += "WHERE amp_pcode || amp_code = '#{ampcode}' "
+      res = con.exec(sql)
+      ampgeom = res[0][0]
+
       sql = "SELECT id,loc_code,loc_desc,astext(the_geom) "
       sql += "FROM locations "
 
@@ -699,6 +731,7 @@ class MapController < ApplicationController
         sql += "WHERE upper(to_char(id,'9999')||to_char(loc_code,'9999')||loc_desc) LIKE '%#{keyword.upcase}%' "
       end
       sql += "AND the_geom IS NOT NULL "
+      sql += "AND intersects(the_geom, '#{ampgeom}') "
 
       res = con.exec(sql)
       con.close
@@ -739,7 +772,6 @@ class MapController < ApplicationController
       data[:locdesc] = a3.join('|')
       data[:geom] = a4.join('|')
       data[:msg] = msg
-      data[:sql] = sql
     end
 
     headers["Content-Type"] = "text/plain; charset=utf-8"
