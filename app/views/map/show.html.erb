@@ -66,9 +66,9 @@
     var cur_query, cur_icontype, cur_extent;
     var cur_hot_id, cur_risk_code, cur_risk_name, risk_hot_id, risk_hot_code, risk_hot_desc;
     var cur_roadid, cur_roadname;
-    var cur_item_search = '';
+    var cur_item_search = 'ladmin';
     var style_hilite, hilite, style_point, style_line, style_resource;
-    var myData, store, searchResultGrid;
+    var myData, storeLadmin, storeLocation, searchResultGridLadmin, searchResultGridLocation;
     var amphoe;
     var contentForPopup = new Array();
     var pointFeature = new Array();
@@ -945,40 +945,75 @@
 
     myData = [];
 
-    var createSearchResultGrid = function() {
-      store = new Ext.data.SimpleStore({
+    var createSearchResultGridLadmin = function() {
+      storeLadmin = new Ext.data.SimpleStore({
         fields: [
-        { name: 'id' }
-        ,{ name: 'lacode' }
-      ]
-    });
-    store.loadData(myData);
+          { name: 'id' }
+          ,{ name: 'lacode' }
+        ]
+      });
+      storeLadmin.loadData(myData);
 
-    searchResultGrid = new Ext.grid.GridPanel({
-      store: store
-      ,id: 'search-result-grid'
-      ,columns: [
-        new Ext.grid.RowNumberer()
-        ,{ id:'srch_id', header: 'ID', dataIndex: 'id', width: 50 }
-        ,{ id:'srch_lacode', header: 'LA Code', dataIndex: 'lacode', width: 150 }
-      ]
-      ,sm: new Ext.grid.RowSelectionModel({
-        singleSelect: true
-        ,listeners: {
-          rowselect: function(sm, row, rec) {
-            var id = rec.data.id;
-            var lacode = rec.data.lacode;
-            var v = vectorLayer.features;
-            //circleFeature(v,id);
-            zoomToLadmin(v,id,lacode);
+      searchResultGridLadmin = new Ext.grid.GridPanel({
+        store: storeLadmin
+        ,id: 'search-result-grid-ladmin'
+        ,columns: [
+          new Ext.grid.RowNumberer()
+          ,{ id:'srch_id', header: 'ID', dataIndex: 'id', width: 50 }
+          ,{ id:'srch_lacode', header: 'Ladmin Code', dataIndex: 'lacode', width: 150 }
+        ]
+        ,sm: new Ext.grid.RowSelectionModel({
+          singleSelect: true
+          ,listeners: {
+            rowselect: function(sm, row, rec) {
+              var id = rec.data.id;
+              var lacode = rec.data.lacode;
+              var v = vectorLayer.features;
+              //circleFeature(v,id);
+              zoomToLadmin(v,id,lacode);
+            }
           }
-        }
-      })
-      ,stripeRows: true
-      ,autoHeight: true
-      ,autoHide: true
-    });
-  };
+        })
+        ,stripeRows: true
+        ,autoHeight: true
+        ,autoHide: true
+      }); //eo searchResultGridLadmin
+    }; //eo createSearchResultGridLadmin
+
+    var createSearchResultGridLocation = function() {
+      storeLocation = new Ext.data.SimpleStore({
+        fields: [
+          { name: 'id' }
+          ,{ name: 'loccode' }
+        ]
+      });
+      storeLocation.loadData(myData);
+
+      searchResultGridLocation = new Ext.grid.GridPanel({
+        store: storeLocation
+        ,id: 'search-result-grid-location'
+        ,columns: [
+          new Ext.grid.RowNumberer()
+          ,{ id:'srch_id', header: 'ID', dataIndex: 'id', width: 50 }
+          ,{ id:'srch_loccode', header: 'Loc Code', dataIndex: 'loccode', width: 150 }
+        ]
+        ,sm: new Ext.grid.RowSelectionModel({
+          singleSelect: true
+          ,listeners: {
+            rowselect: function(sm, row, rec) {
+              var id = rec.data.id;
+              var loccode = rec.data.loccode;
+              var v = vectorLayer.features;
+              //circleFeature(v,id);
+              zoomToLadmin(v,id,loccode);
+            }
+          }
+        })
+        ,stripeRows: true
+        ,autoHeight: true
+        ,autoHide: true
+      }); //eo searchResultGridLocation
+    }; //eo createSearchResultGridLocation
 
   var problemStore = new Ext.data.Store({
     url: '/map/get_problem'
@@ -1955,7 +1990,7 @@
           },{
             id: 'acc-4'
             ,title: 'Search Result'
-            ,items: [ searchResultGrid ]
+            ,items: [ searchResultGridLadmin, searchResultGridLocation ]
             ,listeners: {
               "beforeexpand": function(p) {
                 //Collapse id-chart
@@ -2040,17 +2075,11 @@
   doSearch = function(){
     //First clear all features in vectorLayer and hilite Layer
     if (vectorLayer.features)
-    {
       vectorLayer.removeFeatures(vectorLayer.features);
-    }
     if (hilite.features)
-    {
       hilite.removeFeatures(hilite.features);
-    }
     if (selectedFeature && selectedFeature.popup)
-    {
       map.removePopup(selectedFeature.popup);
-    }
 
     //clear all features on hotspotShadow
     if (hotspotShadow.features)
@@ -2072,77 +2101,131 @@
       cur_query = '';
     }
 
+    //Clear searchResultGridLadmin and searchResultGridLocation
+    //myData = [];
+    //storeLadmin.loadData(myData);
+    //storeLocation.loadData(myData);
+
     var con = new Ext.data.Connection();
     con.request({
       url: '/map/search'
       ,method: 'POST'
-      ,params: { keyword: keyword }
+      ,params: {
+        keyword: keyword
+        ,item: cur_item_search
+      } //eo params
       ,success: function(resp,opt) {
         var info = Ext.util.JSON.decode(resp.responseText);
-        var s_id = info.id.split('|');
-        var s_lacode = info.lacode.split('|');
-        var s_laname = info.laname.split('|');
-        var s_geom = info.geom.split('|');
-        var s_msg = info.msg;
-        var s_totalCount = info.totalCount;
-        var lonlat = '';
-
-        var rec = new Array();
-	if (s_totalCount == 0)
+        if (cur_item_search == 'ladmin')
         {
-          Ext.Msg.show({
-            title: 'Server Message'
-            ,width: 250
-            ,msg: s_msg
-            ,icon: Ext.MessageBox.WARNING
-            ,buttons: Ext.MessageBox.OK
-          });
-        }
-        if (s_totalCount > 0)
+          var s_id = info.id.split('|');
+          var s_lacode = info.lacode.split('|');
+          var s_laname = info.laname.split('|');
+          var s_geom = info.geom.split('|');
+          var s_msg = info.msg;
+          var s_totalCount = info.totalCount;
+          var lonlat = '';
+
+          var rec = new Array();
+          if (s_totalCount == 0)
+          {
+            Ext.Msg.show({
+              title: 'Server Message'
+              ,width: 250
+              ,msg: s_msg
+              ,icon: Ext.MessageBox.WARNING
+              ,buttons: Ext.MessageBox.OK
+            }); //eo show
+          }
+          if (s_totalCount > 0)
+          {
+            //Show searchResultGridLadmin
+            var o = Ext.getCmp('acc-4');
+            //o.items = [ searchResultGridLadmin ];
+            o.expand();
+            Ext.get('search-result-grid-ladmin').enableDisplayMode().show();
+          }
+
+          for(var i=0; i<s_totalCount; i++)
+          {
+            var wkt = new OpenLayers.Format.WKT();
+            var feature = wkt.read(s_geom[i]);
+            contentForPopup[i] = '<h2>ID: ' + s_id[i] + '</h2>' + s_laname[i] + '<p>&nbsp;';
+            feature.id = s_id[i];
+            feature.lacode = s_lacode[i];
+            feature.laname = s_laname[i];
+            vectorLayer.addFeatures(feature);
+            lonlat = feature.geometry.getBounds().getCenterLonLat();
+            rec[i] = [feature.id,feature.lacode];
+          }
+
+          myData = rec;
+          storeLadmin.loadData(myData);
+
+          // Set Center of Map to last feature LonLat
+          var xlon = lonlat.lon;
+          var xlat = lonlat.lat;
+          map.setCenter( new OpenLayers.LonLat(xlon, xlat), 10);
+          selectPopup.activate();
+        } //eo if
+        else if (cur_item_search == 'location')
         {
-          //Show searchResultGrid
-          Ext.getCmp('acc-4').expand();
-          Ext.get('search-result-grid').enableDisplayMode().show();
-       }
+          var s_id = info.id.split('|');
+          var s_loccode = info.loccode.split('|');
+          var s_locdesc = info.locdesc.split('|');
+          var s_geom = info.geom.split('|');
+          var s_msg = info.msg;
+          var s_totalCount = info.totalCount;
+          var lonlat = '';
 
-        for(var i=0; i<s_totalCount; i++)
-        {
-          var wkt = new OpenLayers.Format.WKT();
-          var feature = wkt.read(s_geom[i]);
-          contentForPopup[i] = '<h2>ID: ' + s_id[i] + '</h2>' + s_laname[i] + '<p>&nbsp;';
-          feature.id = s_id[i];
-          feature.lacode = s_lacode[i];
-          feature.laname = s_laname[i];
-          vectorLayer.addFeatures(feature);
-          lonlat = feature.geometry.getBounds().getCenterLonLat();
-          rec[i] = [feature.id,feature.lacode];
-        }
+          var rec = new Array();
+          if (s_totalCount == 0)
+          {
+            Ext.Msg.show({
+              title: 'Server Message'
+              ,width: 250
+              ,msg: s_msg
+              ,icon: Ext.MessageBox.WARNING
+              ,buttons: Ext.MessageBox.OK
+            }); //eo show
+          }
+          if (s_totalCount > 0)
+          {
+            //Show searchResultGridLocation
+            var o = Ext.getCmp('acc-4');
+            //o.items = [ searchResultGridLocation ];
+            o.expand();
+            Ext.get('search-result-grid-location').enableDisplayMode().show();
+          }
 
-        myData = rec;
-        store.loadData(myData);
+          for(var i=0; i<s_totalCount; i++)
+          {
+            var wkt = new OpenLayers.Format.WKT();
+            var feature = wkt.read(s_geom[i]);
+            contentForPopup[i] = '<h2>ID: ' + s_id[i] + '</h2>' + s_locdesc[i] + '<p>&nbsp;';
+            feature.id = s_id[i];
+            feature.loccode = s_loccode[i];
+            feature.locdesc = s_locdesc[i];
+            vectorLayer.addFeatures(feature);
+            lonlat = feature.geometry.getBounds().getCenterLonLat();
+            rec[i] = [feature.id,feature.loccode];
+          }
 
-        // Set Center of Map to last feature LonLat
-        var xlon = lonlat.lon;
-        var xlat = lonlat.lat;
-        map.setCenter( new OpenLayers.LonLat(xlon, xlat), 10);
+          myData = rec;
+          storeLocation.loadData(myData);
 
-        selectPopup.activate();
-
-        /*
-          Ext.Msg.show({
-            title: 'Search Status'
-            ,msg: msg
-            ,width: 200
-            ,icon: Ext.MessageBox.INFO
-            ,buttons: Ext.MessageBox.OK
-          });
-        */
-      }
+          // Set Center of Map to last feature LonLat
+          var xlon = lonlat.lon;
+          var xlat = lonlat.lat;
+          map.setCenter( new OpenLayers.LonLat(xlon, xlat), 10);
+          selectPopup.activate();
+        } //eo else
+      } //eo success
       ,failure: function(f,a) {
         Ext.Msg.alert('Warning', 'Server Error');
-      }
-    });
-  };
+      } //eo failure
+    }); //eo con.request
+  }; //eo doSearch
 
   var setToolbarContent = function() {
     var info = "ปรับแก้โปรแกรมหลังการประชุมวันเสาร์ 22 สิงหาคม 2552 ";
@@ -2510,9 +2593,11 @@
         toolbarExample.app.setStatus(msg);
         //Then clear search result grid
         myData = [];
-        store.loadData(myData);
-        //Hide searchResultGrid ??
-        Ext.get('search-result-grid').enableDisplayMode().hide();
+        storeLadmin.loadData(myData);
+        storeLocation.loadData(myData);
+        //Hide both searchResultGrids
+        Ext.get('search-result-grid-ladmin').enableDisplayMode().hide();
+        Ext.get('search-result-grid-location').enableDisplayMode().hide();
       }
     });
 
@@ -2581,18 +2666,18 @@
               ,id: 'item_search'
               ,tooltip: 'Select search item'
               ,menu: [{
-                text: 'LA Code'
+                text: 'อปท.'
                 ,checked: true
                 ,group: 'item'
                 ,handler: function(){
-                  cur_item_search = 'lacode';
+                  cur_item_search = 'ladmin';
                 }
               },{
-                text: 'Hotspot'
+                text: 'Location'
                 ,checked: false
                 ,group: 'item'
                 ,handler: function(){
-                  cur_item_search = 'hotspot';
+                  cur_item_search = 'location';
                 }
               }]
               //,handler: function() {
@@ -2689,7 +2774,8 @@
         createHotspotShadow();
         createHotspotLayer();
 
-        createSearchResultGrid();
+        createSearchResultGridLadmin();
+        createSearchResultGridLocation();
                 
         addMapControls();
         createToolbar();
@@ -2708,7 +2794,8 @@
         toolbar.activate();
                 
         //Hide searchResultGrid
-        Ext.get('search-result-grid').enableDisplayMode().hide();
+        Ext.get('search-result-grid-ladmin').enableDisplayMode().hide();
+        Ext.get('search-result-grid-location').enableDisplayMode().hide();
 
         //Expand accordion acc-2 Tambon Code to highlight on select
         Ext.getCmp('acc-2').expand();

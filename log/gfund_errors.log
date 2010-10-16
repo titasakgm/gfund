@@ -53,3 +53,10 @@
 [Mon Oct 11 16:03:22 2010] [error] [client 202.29.106.110] File does not exist: /gfund-ORIGIN
 [Mon Oct 11 16:03:29 2010] [error] [client 202.29.106.110] File does not exist: /gfund-ORIGIN
 [Mon Oct 11 16:03:33 2010] [error] [client 202.29.106.110] File does not exist: /gfund-ORIGIN
+[Sat Oct 16 16:30:59 2010] [error] [client 124.122.202.172] Premature end of script headers: map
+[Sat Oct 16 16:31:07 2010] [error] [client 124.122.202.172] Premature end of script headers: map
+[Sat Oct 16 17:37:14 2010] [error] [client 124.122.202.172] Premature end of script headers: map, referer: http://202.176.91.194:8080/map/show/3301
+[Sat Oct 16 17:38:13 2010] [error] [client 124.122.202.172] Premature end of script headers: map, referer: http://202.176.91.194:8080/map/show/3301
+[Sat Oct 16 17:41:36 2010] [error] [client 124.122.202.172] Premature end of script headers: map, referer: http://202.176.91.194:8080/map/show/3301
+[Sat Oct 16 17:42:53 2010] [error] [client 124.122.202.172] Premature end of script headers: map, referer: http://202.176.91.194:8080/map/show/3301
+[Sat Oct 16 17:45:52 2010] [error] [client 124.122.202.172] Premature end of script headers: map, referer: http://202.176.91.194:8080/map/show/3301

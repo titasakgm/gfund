@@ -11752,3 +11752,361 @@ ActionController::RoutingError (No route matches "/manager/html" with {:method=>
   passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
 
 Rendering /gfund/public/404.html (404 Not Found)
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 17:48:35) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 155ms (View: 134, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 17:49:44) [GET]
+  Parameters: {"_dc"=>"1287226204675"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287226204675]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 17:49:44) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 17:49:44) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 17:49:44) [GET]
+  Parameters: {"_dc"=>"1287226204680"}
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287226204680]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 17:49:44) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 17:49:44) [GET]
+  Parameters: {"_dc"=>"1287226204703"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287226204703]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 17:49:59) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"a"}
+
+PGError (ERROR:  operator does not exist: integer || integer
+LINE 1: ...esc,astext(the_geom) FROM locations WHERE upper(id||loc_code...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+):
+  app/controllers/map_controller.rb:703:in `exec'
+  app/controllers/map_controller.rb:703:in `search'
+  passenger (2.2.4) lib/phusion_passenger/rack/request_handler.rb:91:in `process_request'
+  passenger (2.2.4) lib/phusion_passenger/abstract_request_handler.rb:206:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:376:in `start_request_handler'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/utils.rb:182:in `safe_fork'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:162:in `start'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:261:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:286:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+
+Rendering /gfund/public/500.html (500 Internal Server Error)
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 17:50:35) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1113"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 17:58:20) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"noo"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 17:58:27) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1"}
+Completed in 118ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 17:58:30) [POST]
+  Parameters: {"item"=>"ladmin", "keyword"=>"1"}
+Completed in 83ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 17:58:40) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"1"}
+
+PGError (ERROR:  operator does not exist: integer || integer
+LINE 1: ...esc,astext(the_geom) FROM locations WHERE upper(id||loc_code...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+):
+  app/controllers/map_controller.rb:703:in `exec'
+  app/controllers/map_controller.rb:703:in `search'
+  passenger (2.2.4) lib/phusion_passenger/rack/request_handler.rb:91:in `process_request'
+  passenger (2.2.4) lib/phusion_passenger/abstract_request_handler.rb:206:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:376:in `start_request_handler'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/utils.rb:182:in `safe_fork'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:162:in `start'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:261:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:286:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+
+Rendering /gfund/public/500.html (500 Internal Server Error)
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 17:58:53) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 166ms (View: 145, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 18:00:01) [GET]
+  Parameters: {"_dc"=>"1287226821553"}
+Completed in 13ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287226821553]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 18:00:01) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 21ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 18:00:01) [GET]
+  Parameters: {"_dc"=>"1287226821582"}
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287226821582]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 18:00:01) [GET]
+  Parameters: {"_dc"=>"1287226821559"}
+Completed in 26ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287226821559]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 18:00:01) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 18:00:01) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 18:00:16) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"1"}
+
+PGError (ERROR:  operator does not exist: integer || integer
+LINE 1: ...esc,astext(the_geom) FROM locations WHERE upper(id||loc_code...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+):
+  app/controllers/map_controller.rb:703:in `exec'
+  app/controllers/map_controller.rb:703:in `search'
+  passenger (2.2.4) lib/phusion_passenger/rack/request_handler.rb:91:in `process_request'
+  passenger (2.2.4) lib/phusion_passenger/abstract_request_handler.rb:206:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:376:in `start_request_handler'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/utils.rb:182:in `safe_fork'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:162:in `start'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:261:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:286:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+
+Rendering /gfund/public/500.html (500 Internal Server Error)
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 18:02:07) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"1"}
+
+PGError (ERROR:  operator does not exist: integer || integer
+LINE 1: ...esc,astext(the_geom) FROM locations WHERE upper(id||loc_code...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+):
+  app/controllers/map_controller.rb:703:in `exec'
+  app/controllers/map_controller.rb:703:in `search'
+  passenger (2.2.4) lib/phusion_passenger/rack/request_handler.rb:91:in `process_request'
+  passenger (2.2.4) lib/phusion_passenger/abstract_request_handler.rb:206:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:376:in `start_request_handler'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/utils.rb:182:in `safe_fork'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:162:in `start'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:261:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:286:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+
+Rendering /gfund/public/500.html (500 Internal Server Error)
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 18:02:10) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 162ms (View: 141, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 18:03:19) [GET]
+  Parameters: {"_dc"=>"1287227019378"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287227019378]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 18:03:19) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 18:03:19) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 18:03:19) [GET]
+  Parameters: {"_dc"=>"1287227019383"}
+Completed in 24ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287227019383]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 18:03:19) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 18:03:19) [GET]
+  Parameters: {"_dc"=>"1287227019406"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287227019406]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 18:03:39) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"1"}
+
+PGError (ERROR:  operator does not exist: integer || integer
+LINE 1: ...esc,astext(the_geom) FROM locations WHERE upper(id||loc_code...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+):
+  app/controllers/map_controller.rb:703:in `exec'
+  app/controllers/map_controller.rb:703:in `search'
+  passenger (2.2.4) lib/phusion_passenger/rack/request_handler.rb:91:in `process_request'
+  passenger (2.2.4) lib/phusion_passenger/abstract_request_handler.rb:206:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:376:in `start_request_handler'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/utils.rb:182:in `safe_fork'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:332:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:162:in `start'
+  passenger (2.2.4) lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:261:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/spawn_manager.rb:286:in `handle_spawn_application'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `__send__'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:351:in `main_loop'
+  passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
+
+Rendering /gfund/public/500.html (500 Internal Server Error)
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 18:06:06) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"1"}
+Completed in 80ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]
+
+
+Processing MapController#show (for 124.122.202.172 at 2010-10-16 18:07:01) [GET]
+  Parameters: {"id"=>"3301"}
+Rendering template within layouts/ext
+Rendering map/show
+Completed in 167ms (View: 143, DB: 0) | 200 OK [http://202.176.91.194/map/show/3301]
+
+
+Processing MapController#get_hotspot (for 124.122.202.172 at 2010-10-16 18:07:06) [GET]
+  Parameters: {"_dc"=>"1287227246823"}
+Completed in 24ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_hotspot?_dc=1287227246823]
+
+
+Processing MapController#get_lacode (for 124.122.202.172 at 2010-10-16 18:07:06) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacode]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 18:07:06) [GET]
+  Parameters: {"_dc"=>"1287227246840"}
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287227246840]
+
+
+Processing MapController#get_problem (for 124.122.202.172 at 2010-10-16 18:07:06) [GET]
+  Parameters: {"_dc"=>"1287227246819"}
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_problem?_dc=1287227246819]
+
+
+Processing MapController#get_tamcode (for 124.122.202.172 at 2010-10-16 18:07:07) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_tamcode]
+
+
+Processing MapController#get_lacodemon (for 124.122.202.172 at 2010-10-16 18:07:07) [POST]
+  Parameters: {"ampcode"=>"3301"}
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/get_lacodemon]
+
+
+Processing MapController#search (for 124.122.202.172 at 2010-10-16 18:07:14) [POST]
+  Parameters: {"item"=>"location", "keyword"=>"snook"}
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://202.176.91.194/map/search]

@@ -635,55 +635,112 @@ class MapController < ApplicationController
 
   def search
     keyword = params[:keyword]
+    item = params[:item]
 
-    con = PGconn.connect("localhost",5432,nil,nil,"gfund","postgres")
-    sql = "SELECT id,la_code,la_name,astext(the_geom) "
-    sql += "FROM ladmins "
+    if (item == 'ladmin')
+      con = PGconn.connect("localhost",5432,nil,nil,"gfund","postgres")
+      sql = "SELECT id,la_code,la_name,astext(the_geom) "
+      sql += "FROM ladmins "
 
-    if (keyword =~ /POLYGON/)
-      sql += "WHERE intersects(the_geom, GeometryFromText('#{keyword}',4326)) "
-    else
-      sql += "WHERE upper(id||la_code||la_name) LIKE '%#{keyword.upcase}%' "
+      if (keyword =~ /POLYGON/)
+        sql += "WHERE intersects(the_geom, GeometryFromText('#{keyword}',4326)) "
+      else
+        sql += "WHERE upper(to_char(id,'9999')||to_char(la_code,'9999')||la_name) LIKE '%#{keyword.upcase}%' "
+      end
+      sql += "AND the_geom IS NOT NULL "
+
+      res = con.exec(sql)
+      con.close
+
+      a1 = Array.new
+      a2 = Array.new
+      a3 = Array.new
+      a4 = Array.new
+
+      msg = "Sorry, no record found"
+
+      found = res.num_tuples
+      if (found == 1)
+        msg = "#{found} record found"
+      elsif (found > 1)
+        msg = "#{found} records found"
+      end
+
+      if (found > 0)
+        res.each do |rec|
+          id = rec[0]
+          lacode = rec[1]
+          laname = rec[2]
+          geom = rec[3]
+          a1.push(id)
+          a2.push(lacode)
+          a3.push(laname)
+          a4.push(geom)
+        end
+      end
+
+      data = Hash.new
+      data[:success] = 'true'
+      data[:totalCount] = found
+
+      data[:id] = a1.join('|')
+      data[:lacode] = a2.join('|')
+      data[:laname] = a3.join('|')
+      data[:geom] = a4.join('|')
+      data[:msg] = msg
+    elsif (item == 'location')
+      con = PGconn.connect("localhost",5432,nil,nil,"gfund","postgres")
+      sql = "SELECT id,loc_code,loc_desc,astext(the_geom) "
+      sql += "FROM locations "
+
+      if (keyword =~ /POLYGON/)
+        sql += "WHERE intersects(the_geom, GeometryFromText('#{keyword}',4326)) "
+      else
+        sql += "WHERE upper(to_char(id,'9999')||to_char(loc_code,'9999')||loc_desc) LIKE '%#{keyword.upcase}%' "
+      end
+      sql += "AND the_geom IS NOT NULL "
+
+      res = con.exec(sql)
+      con.close
+
+      a1 = Array.new
+      a2 = Array.new
+      a3 = Array.new
+      a4 = Array.new
+
+      msg = "Sorry, no record found"
+
+      found = res.num_tuples
+      if (found == 1)
+        msg = "#{found} record found"
+      elsif (found > 1)
+        msg = "#{found} records found"
+      end
+
+      if (found > 0)
+        res.each do |rec|
+          id = rec[0]
+          loccode = rec[1]
+          locdesc = rec[2]
+          geom = rec[3]
+          a1.push(id)
+          a2.push(loccode)
+          a3.push(locdesc)
+          a4.push(geom)
+        end
+      end
+
+      data = Hash.new
+      data[:success] = 'true'
+      data[:totalCount] = found
+
+      data[:id] = a1.join('|')
+      data[:loccode] = a2.join('|')
+      data[:locdesc] = a3.join('|')
+      data[:geom] = a4.join('|')
+      data[:msg] = msg
+      data[:sql] = sql
     end
-    sql += "AND the_geom IS NOT NULL "
-
-    res = con.exec(sql)
-    con.close
-
-    a1 = Array.new
-    a2 = Array.new
-    a3 = Array.new
-    a4 = Array.new
-
-    res.each do |rec|
-      id = rec[0]
-      lacode = rec[1]
-      laname = rec[2]
-      geom = rec[3]
-      a1.push(id)
-      a2.push(lacode)
-      a3.push(laname)
-      a4.push(geom)
-    end
-
-    msg = "Sorry, no record found"
-
-    found = res.num_tuples
-    if (found == 1)
-      msg = "#{found} record found"
-    elsif (found > 1)
-      msg = "#{found} records found"
-    end
-
-    data = Hash.new
-    data[:success] = 'true'
-    data[:totalCount] = found
-
-    data[:id] = a1.join('|')
-    data[:lacode] = a2.join('|')
-    data[:laname] = a3.join('|')
-    data[:geom] = a4.join('|')
-    data[:msg] = msg
 
     headers["Content-Type"] = "text/plain; charset=utf-8"
     render :text => data.to_json, :layout => false
