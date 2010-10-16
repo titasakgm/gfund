@@ -14934,3 +14934,9 @@ Processing UserController#profile (for 124.122.202.172 at 2010-10-17 00:49:33) [
 Rendering template within layouts/ext
 Rendering user/profile
 Completed in 1ms (View: 1, DB: 0) | 200 OK [http://202.176.91.194/user/profile/]
+
+
+Processing UserController#index (for 124.122.202.172 at 2010-10-17 00:54:40) [GET]
+Rendering template within layouts/ext
+Rendering user/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://202.176.91.194/user]
