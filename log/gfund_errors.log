@@ -60,3 +60,5 @@
 [Sat Oct 16 17:41:36 2010] [error] [client 124.122.202.172] Premature end of script headers: map, referer: http://202.176.91.194:8080/map/show/3301
 [Sat Oct 16 17:42:53 2010] [error] [client 124.122.202.172] Premature end of script headers: map, referer: http://202.176.91.194:8080/map/show/3301
 [Sat Oct 16 17:45:52 2010] [error] [client 124.122.202.172] Premature end of script headers: map, referer: http://202.176.91.194:8080/map/show/3301
+[Fri Oct 22 00:58:39 2010] [error] [client 125.230.64.242] Premature end of script headers: 
+[Wed Feb 09 12:06:37 2011] [error] [client 46.4.166.152] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /
