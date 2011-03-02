@@ -1,6 +1,6 @@
-  Ext.BLANK_IMAGE_URL = '/mfbase/ext/resources/images/default/s.gif';
+Ext.BLANK_IMAGE_URL = '/mfbase/ext/resources/images/default/s.gif';
 
-  Ext.override(Ext.Button, {
+Ext.override(Ext.Button, {
     setIcon: function(url){
       if (this.rendered){
         var btnEl = this.getEl().child(this.buttonSelector);
@@ -2085,7 +2085,7 @@
       // var element = document.getElementById('output');
       var msg = '';
       if(feature.geometry.CLASS_NAME == "OpenLayers.Geometry.LineString") {
-        msg += 'Total Length: ' + feature.measure.toFixed(4) + ' Kilometers';
+        msg += 'ระยะทางรวม: ' + feature.measure.toFixed(4) + ' เมตร';
       }
       // element.innerHTML = out;
       Ext.Msg.show({

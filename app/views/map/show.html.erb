@@ -52,7 +52,12 @@
   // create namespace
   Ext.namespace('toolbarExample');
      
-  // create application
+  if(Ext.isChrome == true){
+    var chromeDatePickerCSS = ".x-date-picker x-unselectable {border-color: #1b376c;background-color:#fff;position: relative;width: 185px;}";
+    Ext.util.CSS.createStyleSheet(chromeDatePickerCSS,'chromeDatePickerStyle');
+  }
+  
+// create application
   toolbarExample.app = function() {
     // private vars:
     var map, toolbar, viewport;

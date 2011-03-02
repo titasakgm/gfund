@@ -15,6 +15,13 @@ class MapController < ApplicationController
     log.close
   end
 
+  def logx(msg)
+    log = open("/tmp/showx","a")
+    log.write(msg)
+    log.write("\n")
+    log.close
+  end
+
   def login
     @user = params[:user]
     @pass = params[:pass]
@@ -83,6 +90,34 @@ class MapController < ApplicationController
       redirect_to :controller => 'map', :action => 'show', :id => session[:user]
     end
     render :layout => 'ext'
+  end
+   
+  def showx
+    lacode = params[:id]
+    ampcode = Ladmin.find_by_sql(["SELECT la_pcode || la_acode as acode FROM ladmins WHERE la_code = ?", lacode])
+    id = ampcode[0].acode
+    pcode = id[0..1]
+    acode = id[2..3]
+
+    @ampcode = ''
+    @ampname = ''
+    @ampbound = ''
+    if (id != 'Invalid')
+      a = Amphoe.find(:first,:select=>'amp_name',
+        :conditions => "amp_pcode = '#{pcode}' AND amp_code = '#{acode}' ")
+      @ampname = a.amp_name
+      @ampcode = pcode << acode
+      b = Extent.find(:first, :conditions=> "code = '#{@ampcode}'")
+      ext = b.bound.split(',')
+      ext[0] = sprintf("%.3f",ext[0].to_f - 0.005)
+      ext[1] = sprintf("%.3f",ext[1].to_f - 0.005)
+      ext[2] = sprintf("%.3f",ext[2].to_f + 0.005)
+      ext[3] = sprintf("%.3f",ext[3].to_f + 0.005)
+      @ampbound = ext.join(',')
+    end
+
+    session[:user] = id
+    redirect_to :controller => 'map', :action => 'show', :id => session[:user]
   end
    
   def get_problem
