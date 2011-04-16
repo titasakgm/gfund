@@ -223,7 +223,7 @@ Ext.override(Ext.Button, {
          "http://202.176.91.194/cgi-bin/mapserv"
          ,{
            map: '/ms520/map/wms-thai.map'
-	       ,layers: 'religion'
+	       ,layers: ['temple','church','mosque']
 	       ,style: ''
            ,format: 'image/png'
          }
@@ -231,6 +231,20 @@ Ext.override(Ext.Button, {
       );
       //religion.setOpacity(0.6);
       map.addLayer(religion);
+    };
+
+    var createTempleLayer = function() {
+      temple = new OpenLayers.Layer.MapServer("TEMPLE",
+         "http://202.176.91.194/cgi-bin/mapserv"
+         ,{
+           map: '/ms520/map/wms-thai.map'
+	       ,layers: 'temple'
+	       ,style: ''
+           ,format: 'image/png'
+         }
+         ,{ isBaseLayer: false, buffer: 0, transparent: true }
+      );
+      map.addLayer(temple);
     };
 
     var createBankLayer = function() {
@@ -307,6 +321,7 @@ Ext.override(Ext.Button, {
 
       map.addControl(new OpenLayers.Control.MousePosition());
       map.addControl(new OpenLayers.Control.LayerSwitcher());
+      map.addControl(new OpenLayers.Control.Scale());
     };
         
     var createToolbar = function() {
@@ -362,9 +377,9 @@ Ext.override(Ext.Button, {
           ,layerName: "HEALTH"
           ,checked: false
         },{
-          text: "Religion"
+          text: "Temple"
           ,leaf: true
-          ,layerName: "RELIGION"
+          ,layerName: "TEMPLE"
           ,checked: false
         },{
           text: "Bank"
@@ -1642,7 +1657,7 @@ Ext.override(Ext.Button, {
           ,el: 'north'
           ,height: 60
           ,margins: '0 5 0 5'
-          ,style:'background-image:url(/images/header.gif);background-repeat:no-repeat;border:solid 1px #1D6241;'
+          ,style:'background-image:url(/images/header.gif);background-repeat:no-repeat;border:solid 1px #1D6241;width:60px;height:100%;'
         }),{
           region: 'west'
           ,title: 'Main Menu'

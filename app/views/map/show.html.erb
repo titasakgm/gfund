@@ -205,11 +205,11 @@
          "http://202.176.91.194/cgi-bin/mapserv",
          {
            map: '/ms520/map/wms-thai.map'
-	         ,layers: 'amphoe'
+	         ,layers: 'amphoe lbl_amphoe'
 	         ,style: ''
            ,format: 'image/png'
          },
-         { isBaseLayer: true, buffer: 0, transparent: true }
+         { isBaseLayer: true, buffer: 0, transparent: true, singleTile: true }
       );
       map.addLayer(amphoe);
     };
@@ -219,11 +219,11 @@
          "http://202.176.91.194/cgi-bin/mapserv",
          {
            map: '/ms520/map/wms-thai.map'
-	         ,layers: 'tambon'
+	         ,layers: 'tambon lbl_tambon'
 	         ,style: ''
            ,format: 'image/png'
          },
-         { isBaseLayer: false, buffer: 0, transparent: true }
+         { isBaseLayer: false, buffer: 0, transparent: true, singleTile: true }
       );
       //tambon.setOpacity(.4);
       map.addLayer(tambon);
@@ -234,13 +234,13 @@
          "http://202.176.91.194/cgi-bin/mapserv"
          ,{
            map: '/ms520/map/wms-thai.map'
-	         ,layers: 'mainroad road localroad'
+	         ,layers: 'road localroad'
 	         ,style: ''
            ,format: 'image/png'
          }
          ,{ isBaseLayer: false, buffer: 0, transparent: true }
 	  );
-      //road.setOpacity(0.5);
+      road.setOpacity(0.33);
       map.addLayer(road);
     };
 
@@ -274,16 +274,46 @@
       map.addLayer(health);
     };
 
+    var createHcenterLayer = function() {
+      hcenter = new OpenLayers.Layer.MapServer("HCENTER",
+         "http://202.176.91.194/cgi-bin/mapserv"
+         ,{
+           map: '/ms520/map/wms-thai.map'
+	         ,layers: 'hcenter'
+	         ,style: ''
+           ,format: 'image/png'
+         }
+         ,{ isBaseLayer: false, buffer: 0, transparent: true }
+      );
+      //hcenter.setOpacity(0.5);
+      map.addLayer(hcenter);
+    };
+
+    var createHospitalLayer = function() {
+      hospital = new OpenLayers.Layer.MapServer("HOSPITAL",
+         "http://202.176.91.194/cgi-bin/mapserv"
+         ,{
+           map: '/ms520/map/wms-thai.map'
+	         ,layers: 'hospital'
+	         ,style: ''
+           ,format: 'image/png'
+         }
+         ,{ isBaseLayer: false, buffer: 0, transparent: true, singleTile: true }
+      );
+      //hospital.setOpacity(0.5);
+      map.addLayer(hospital);
+    };
+
     var createReligionLayer = function() {
       religion = new OpenLayers.Layer.MapServer("RELIGION",
          "http://202.176.91.194/cgi-bin/mapserv"
          ,{
            map: '/ms520/map/wms-thai.map'
-	         ,layers: 'religion'
+	         ,layers: 'temple church mosque'
 	         ,style: ''
            ,format: 'image/png'
          }
-         ,{ isBaseLayer: false, buffer: 0, transparent: true }
+         ,{ isBaseLayer: false, buffer: 0, transparent: true, singleTile: true }
       );
       //religion.setOpacity(0.6);
       map.addLayer(religion);
@@ -398,32 +428,37 @@
         ,leaf: false
         ,expanded: true
         ,children: [{
-          text: "Tambon"
+          text: "ขอบเขตตำบล"
           ,leaf: true
           ,layerName: "TAMBON"
           ,checked: true
         },{
-          text: "Roads"
+          text: "ถนน"
           ,leaf: true
           ,layerName: "ROAD"
           ,checked: false
         },{
-          text: "Educations"
+          text: "การศึกษา"
           ,leaf: true
           ,layerName: "EDUCATION"
           ,checked: false
         },{
-          text: "Health"
+          text: "สถานีอนามัย"
           ,leaf: true
-          ,layerName: "HEALTH"
+          ,layerName: "HCENTER"
           ,checked: false
         },{
-          text: "Religion"
+          text: "โรงพยาบาล"
+          ,leaf: true
+          ,layerName: "HOSPITAL"
+          ,checked: false
+        },{
+          text: "ศาสนสถาน"
           ,leaf: true
           ,layerName: "RELIGION"
           ,checked: false
         },{
-          text: "Bank"
+          text: "ธนาคาร"
           ,leaf: true
           ,layerName: "BANK"
           ,checked: false
@@ -1769,7 +1804,7 @@
 
   var tamcodegrid = new Ext.grid.GridPanel({
     frame: false
-    ,width: 250
+    ,autoWidth: true
     ,height: 300
     ,autoScroll: true
     ,store: tamcodeStore
@@ -1847,7 +1882,7 @@
 
   var lacodegrid = new Ext.grid.GridPanel({
     frame: false
-    ,width: 250
+    ,autoWidth: true
     ,height: 300
     ,autoScroll: true
     ,store: lacodeStore
@@ -2903,7 +2938,9 @@
 
         createEducationLayer();
 
-        createHealthLayer();
+        //createHealthLayer();
+        createHcenterLayer();
+        createHospitalLayer();
 
         createReligionLayer();
 
