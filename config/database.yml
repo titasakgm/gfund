@@ -3,6 +3,7 @@ production:
   database: gfund_production
   host: localhost
   username: postgres
+  password: 1234
   template: template_postgis
 
 test:
@@ -10,6 +11,7 @@ test:
   database: gfund_test
   host: localhost
   username: postgres
+  password: 1234
   template: template_postgis
 
 development:
@@ -17,6 +19,7 @@ development:
   database: gfund_development
   host: localhost
   username: postgres
+  password: 1234
   template: template_postgis
 
 gfund:
@@ -24,5 +27,6 @@ gfund:
   database: gfund
   host: localhost
   username: postgres
+  password: 1234
   template: template_postgis
 

@@ -25,8 +25,10 @@ class MapController < ApplicationController
   def login
     @user = params[:user]
     @pass = params[:pass]
-    
+
+    logx("login: #{@use}|#{@pass}")    
     u = User.find_by_user_id(@user)
+    
     if (u.nil?) # First time user not update profile
       if (@user == @pass) 
         data = { :success => 'true', :user => @user }
@@ -88,8 +90,9 @@ class MapController < ApplicationController
       redirect_to :controller => 'user', :action => 'index'
     elsif (id != session[:user])
       redirect_to :controller => 'map', :action => 'show', :id => session[:user]
+    else
+      render :layout => 'ext'
     end
-    render :layout => 'ext'
   end
    
   def showx

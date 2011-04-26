@@ -11,7 +11,7 @@ Ext.onReady(function(){
 
   var login = new Ext.FormPanel({
     labelWidth: 80
-    ,url: '/map/login'
+    ,url: '/gfund/map/login'
     ,frame:true
     ,title:'GFUND LOGIN'
     ,defaultType: 'textfield'
@@ -47,7 +47,7 @@ Ext.onReady(function(){
             ,success: function(form, action){
               json = Ext.util.JSON.decode(action.response.responseText);
               var amphoe = json.user;
-              var url = "/map/show/" + amphoe;
+              var url = "/gfund/map/show/" + amphoe;
               if (json.user == 'admin')
                 url = "/admin/"
               if (amphoe == 'Invalid')

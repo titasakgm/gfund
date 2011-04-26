@@ -1,8 +1,8 @@
 <title>GFUND: อำเภอ<%= @ampname %></title>
     
-<%= stylesheet_link_tag "/opl/theme/default/framedCloud.css" %>
+<%= stylesheet_link_tag "/gfund/opl/theme/default/framedCloud.css" %>
 
-<%= javascript_include_tag "/mfbase/openlayers/lib/OpenLayers.js" %>
+<%= javascript_include_tag "/gfund/javascripts//mfbase/openlayers/lib/OpenLayers.js" %>
 
 <style>
   .my-center-button .x-btn-center {
@@ -34,11 +34,11 @@
   var gMfLocation = "/mfbase/mapfish/";
 </script>
 
-<%= javascript_include_tag "/mfbase/mapfish/MapFish.js" %>
-<%= javascript_include_tag "/mfbase/examples.js" %>
+<%= javascript_include_tag "/gfund/javascripts/mfbase/mapfish/MapFish.js" %>
+<%= javascript_include_tag "/gfund/javascripts/mfbase/examples.js" %>
 
 <script type="text/javascript">
-  Ext.BLANK_IMAGE_URL = '/mfbase/ext/resources/images/default/s.gif';
+  Ext.BLANK_IMAGE_URL = '/gfund/javascripts/mfbase/ext/resources/images/default/s.gif';
 
   Ext.override(Ext.Button, {
     setIcon: function(url){
@@ -202,9 +202,9 @@
 
     var createTileAmphoeLayer = function() {
       amphoe = new OpenLayers.Layer.MapServer("AMPHOE",
-         "http://202.176.91.194/cgi-bin/mapserv",
+         "http://50.56.112.140/cgi-bin/mapserv",
          {
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	         ,layers: 'amphoe lbl_amphoe'
 	         ,style: ''
            ,format: 'image/png'
@@ -216,9 +216,9 @@
 
     var createTileTambonLayer = function() {
       tambon = new OpenLayers.Layer.MapServer("TAMBON",
-         "http://202.176.91.194/cgi-bin/mapserv",
+         "http://50.56.112.140/cgi-bin/mapserv",
          {
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	         ,layers: 'tambon lbl_tambon'
 	         ,style: ''
            ,format: 'image/png'
@@ -231,9 +231,9 @@
 
     var createTileRoadLayer = function() {
       road = new OpenLayers.Layer.MapServer("ROAD",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	         ,layers: 'road localroad'
 	         ,style: ''
            ,format: 'image/png'
@@ -246,9 +246,9 @@
 
     var createEducationLayer = function() {
       education = new OpenLayers.Layer.MapServer("EDUCATION",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	         ,layers: 'education'
 	         ,style: ''
            ,format: 'image/png'
@@ -261,9 +261,9 @@
 
     var createHealthLayer = function() {
       health = new OpenLayers.Layer.MapServer("HEALTH",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	         ,layers: 'health'
 	         ,style: ''
            ,format: 'image/png'
@@ -276,9 +276,9 @@
 
     var createHcenterLayer = function() {
       hcenter = new OpenLayers.Layer.MapServer("HCENTER",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	         ,layers: 'hcenter'
 	         ,style: ''
            ,format: 'image/png'
@@ -291,9 +291,9 @@
 
     var createHospitalLayer = function() {
       hospital = new OpenLayers.Layer.MapServer("HOSPITAL",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	         ,layers: 'hospital'
 	         ,style: ''
            ,format: 'image/png'
@@ -306,9 +306,9 @@
 
     var createReligionLayer = function() {
       religion = new OpenLayers.Layer.MapServer("RELIGION",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	         ,layers: 'temple church mosque'
 	         ,style: ''
            ,format: 'image/png'
@@ -321,9 +321,9 @@
 
     var createBankLayer = function() {
       bank = new OpenLayers.Layer.MapServer("BANK",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	         ,layers: 'bank'
 	         ,style: ''
            ,format: 'image/png'
@@ -497,7 +497,7 @@
         }
 
         var cbLacodeStore = new Ext.data.Store({
-          url: '/map/get_lacode'
+          url: '/gfund/map/get_lacode'
           ,baseParams: { ampcode: ampcode }
           ,reader: new Ext.data.JsonReader({
             root: 'rows'
@@ -518,7 +518,7 @@
           ,buttonAlign: 'center'
           ,autoHeight: true
           ,labelWidth: 75
-          ,url: '/map/save_geom'
+          ,url: '/gfund/map/save_geom'
           ,frame: false
           ,border: false
           ,bodyStyle: 'padding: 5px 5px 0 5px;'
@@ -613,7 +613,7 @@
                   {
                     var con = new Ext.data.Connection();
                     con.request({
-                      url: '/map/delete_lageom'
+                      url: '/gfund/map/delete_lageom'
                       ,params: {
                         xlacode: xlacode
                       }
@@ -668,7 +668,7 @@
           ,buttonAlign: 'center'
           ,autoHeight: true
           ,labelWidth: 75
-          ,url: '/map/save_line'
+          ,url: '/gfund/map/save_line'
           ,frame: false
           ,border: false
           ,bodyStyle: 'padding: 5px 5px 0 5px;'
@@ -745,7 +745,7 @@
                   {
                     var con = new Ext.data.Connection();
                     con.request({
-                      url: '/map/delete_road'
+                      url: '/gfund/map/delete_road'
                       ,params: {
                         xroadid: xroadid
                       }
@@ -797,7 +797,7 @@
         }
 
         var cbLacodeStore = new Ext.data.Store({
-          url: '/map/get_lacode'
+          url: '/gfund/map/get_lacode'
           ,baseParams: { ampcode: ampcode }
           ,reader: new Ext.data.JsonReader({
             root: 'rows'
@@ -838,7 +838,7 @@
           ,buttonAlign: 'center'
           ,autoHeight: true
           ,labelWidth: 75
-          ,url: '/map/add_hotspot'
+          ,url: '/gfund/map/add_hotspot'
           ,baseParams: {
             hot_loc_id: cur_loc_id
           }
@@ -1087,7 +1087,7 @@
         ,buttonAlign: 'center'
         ,autoHeight: true
         ,labelWidth: 75
-        ,url: '/map/edit_location'
+        ,url: '/gfund/map/edit_location'
         ,baseParams: {
           loc_id: cur_loc_id
         }
@@ -1170,7 +1170,7 @@
                 if (btn == 'yes') {
                   var con = new Ext.data.Connection();
                   con.request({
-                    url: '/map/delete_location'
+                    url: '/gfund/map/delete_location'
                     ,params: {
                       loc_id: cur_loc_id
                     }
@@ -1203,7 +1203,7 @@
     }; //eo showLocForm
 
   var problemStore = new Ext.data.Store({
-    url: '/map/get_problem'
+    url: '/gfund/map/get_problem'
     ,method: 'POST'
     ,reader: new Ext.data.JsonReader({
       root: 'rows'
@@ -1231,7 +1231,7 @@
   });
 
   var hotspotStore = new Ext.data.Store({
-    url: '/map/get_hotspot'
+    url: '/gfund/map/get_hotspot'
     ,method: 'POST'
     ,reader: new Ext.data.JsonReader({
       root: 'rows'
@@ -1268,7 +1268,7 @@
           }
           var con = new Ext.data.Connection();
           con.request({
-            url: '/map/get_location'
+            url: '/gfund/map/get_location'
             ,params: {
                hotcode: cur_hotcode
                ,extent: box
@@ -1292,7 +1292,7 @@
                 //Add hotspotLayer with icon accoring to loc_code
                 var size = new OpenLayers.Size(30,30);
                 var offset = new OpenLayers.Pixel(-(size.w/2), -(size.h/2));
-                var imgurl = "http://202.176.91.194/ms520/symbols/icon" + info.rows[i].loc_code + ".png";
+                var imgurl = "http://50.56.112.140/ms565/symbols/icon" + info.rows[i].loc_code + ".png";
                 var icon = new OpenLayers.Icon(imgurl,size,offset);
 
                 var lon = info.rows[i].lon;
@@ -1319,7 +1319,7 @@
 
   function showRiskForm (){
     var riskHotStore = new Ext.data.Store({
-      url: '/map/get_location'
+      url: '/gfund/map/get_location'
       ,baseParams: {
         ampcode: ampcode
         ,hotcode: 0 // show all hotspots
@@ -1342,7 +1342,7 @@
     riskHotStore.load();
 
     var cbLacodeStore = new Ext.data.Store({
-      url: '/map/get_lacode'
+      url: '/gfund/map/get_lacode'
       ,baseParams: { ampcode: ampcode }
       ,reader: new Ext.data.JsonReader({
         root: 'rows'
@@ -1368,7 +1368,7 @@
       ,buttonAlign: 'center'
       ,autoHeight: true
       ,labelWidth: 75
-      ,url: '/map/add_risk'
+      ,url: '/gfund/map/add_risk'
       ,baseParams: {
         risk_code: cur_risk_code 
       }
@@ -1524,7 +1524,7 @@
     {
       var con = new Ext.data.Connection();
       con.request({
-        url: '/map/get_riskmap'
+        url: '/gfund/map/get_riskmap'
         ,params: { ampcode: ampcode, riskcode: cur_risk_code, extent: cur_extent }
         ,method: 'POST'
         ,success: function(resp,opt) {
@@ -1585,7 +1585,7 @@
 
             var size = new OpenLayers.Size(45,45);
             var offset = new OpenLayers.Pixel(-(size.w/2), -(size.h/2));
-            var imgurl = "http://202.176.91.194/ms520/symbols/icon" + cur_icontype + ".png";
+            var imgurl = "http://50.56.112.140/ms565/symbols/icon" + cur_icontype + ".png";
 
             var icon = new OpenLayers.Icon(imgurl,size,offset);
             marker = new OpenLayers.Marker( new OpenLayers.LonLat(lon,lat),icon.clone());
@@ -1638,7 +1638,7 @@
         else
           e.field = 'prob_desc';
         con.request({
-          url: '/map/update_problem'
+          url: '/gfund/map/update_problem'
           ,params: {
             id: e.record.data.id
             ,field: e.field
@@ -1719,7 +1719,7 @@
         else
           e.field = 'hot_desc';
         con.request({
-          url: '/map/update_hotspot'
+          url: '/gfund/map/update_hotspot'
           ,params: {
             id: e.record.data.id
             ,field: e.field
@@ -1759,7 +1759,7 @@
   };
 
   var tamcodeStore = new Ext.data.Store({
-    url: '/map/get_tamcode'
+    url: '/gfund/map/get_tamcode'
     ,baseParams: { ampcode: ampcode }
     ,reader: new Ext.data.JsonReader({
       root: 'rows'
@@ -1781,7 +1781,7 @@
         fn: function(sm,index,record){
           var con = new Ext.data.Connection();
           con.request({
-            url: '/map/tamRowSelect'
+            url: '/gfund/map/tamRowSelect'
             ,params: { id: record.data.id }
             ,method: 'POST'
             ,success: function(resp,opt) {
@@ -1826,7 +1826,7 @@
   });
 
   var lacodeStore = new Ext.data.Store({
-    url: '/map/get_lacode'
+    url: '/gfund/map/get_lacode'
     ,baseParams: { ampcode: ampcode }
     ,reader: new Ext.data.JsonReader({
       root: 'rows'
@@ -1854,7 +1854,7 @@
         fn: function(sm,index,record){
           var con = new Ext.data.Connection();
           con.request({
-            url: '/map/ladminRowSelect'
+            url: '/gfund/map/ladminRowSelect'
             ,params: { lacode: record.data.lacode }
             ,method: 'POST'
             ,success: function(resp,opt) {
@@ -1904,7 +1904,7 @@
   });
 
   var lacodeMonitorStore = new Ext.data.Store({
-    url: '/map/get_lacodemon'
+    url: '/gfund/map/get_lacodemon'
     ,baseParams: { ampcode: ampcode }
     ,reader: new Ext.data.JsonReader({
       root: 'rows'
@@ -1921,7 +1921,7 @@
 
   var cbProblemStore = new Ext.data.Store({
 
-    url: '/map/get_problem'
+    url: '/gfund/map/get_problem'
     ,method: 'POST'
     ,reader: new Ext.data.JsonReader({
       root: 'rows'
@@ -1942,7 +1942,7 @@
     ,buttonAlign: 'center'
     ,autoHeight: true
     ,labelWidth: 0
-    ,url: '/map/get_resprog'
+    ,url: '/gfund/map/get_resprog'
     ,frame: false
     ,border: false
     ,bodyStyle: 'padding: 5px 5px 0 5px;'
@@ -1975,7 +1975,7 @@
   {
     var con = new Ext.data.Connection();
     con.request({
-      url: '/map/get_progress'
+      url: '/gfund/map/get_progress'
       ,params: { lacode: lacode, probcode: probcode }
       ,method: 'POST'
       ,success: function(resp,opt) {
@@ -2016,7 +2016,7 @@
         fn: function(sm,index,record){
           var con = new Ext.data.Connection();
           con.request({
-            url: '/map/ladminRowSelect'
+            url: '/gfund/map/ladminRowSelect'
             ,params: { lacode: record.data.lacode }
             ,method: 'POST'
             ,success: function(resp,opt) {
@@ -2295,7 +2295,7 @@
 
     var con = new Ext.data.Connection();
     con.request({
-      url: '/map/search'
+      url: '/gfund/map/search'
       ,method: 'POST'
       ,params: {
         keyword: keyword
@@ -2628,7 +2628,7 @@
 
     var deleteFromDatabase = function(id){
       Ext.Ajax.request({
-        url: '/map/hot_delete'
+        url: '/gfund/map/hot_delete'
         ,params: { id: id }
         ,success: function(resp,opt) {
           Ext.Msg.alert('Status', '1 feature deleted from Database!');
@@ -2901,10 +2901,10 @@
             fn: function(node, e){
               var con = new Ext.data.Connection();
               con.request({
-                url: '/map/logout'
+                url: '/gfund/map/logout'
                 ,method: 'POST'
                 ,success: function(resp,opt) {
-                  href = '/user';
+                  href = '/gfund/user';
                   window.location.href=href;
                 } //eo success
               }); //eo request

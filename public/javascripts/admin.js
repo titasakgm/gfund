@@ -1,5 +1,5 @@
 Ext.onReady(function() {
-  Ext.BLANK_IMAGE_URL = '/ext/resources/images/default/s.gif';
+  Ext.BLANK_IMAGE_URL = '/gfund/javascripts/mfbase/ext/resources/images/default/s.gif';
 
   var hotspotgrid;
   var problemgrid;
@@ -10,7 +10,7 @@ Ext.onReady(function() {
 
   function logout()
   {
-    window.location.href = '/user';
+    window.location.href = '/gfund/user';
   }
 
   function ladminSearch()
@@ -125,7 +125,7 @@ Ext.onReady(function() {
   ]); //eo ds_model_hotspot
 
   hotspotStore = new Ext.data.Store({
-    url: '/map/get_hotspot'
+    url: '/gfund/map/get_hotspot'
     ,method: 'POST'
     ,reader: new Ext.data.JsonReader({
       root: 'rows'
@@ -164,7 +164,7 @@ Ext.onReady(function() {
         else
           e.field = 'hot_desc';
         con.request({
-          url: '/map/update_hotspot'
+          url: '/gfund/map/update_hotspot'
           ,params: {
             id: e.record.data.id
             ,field: e.field
@@ -196,7 +196,7 @@ Ext.onReady(function() {
       ,handler: function() {
         var con = new Ext.data.Connection();
         con.request({
-          url: '/map/insert_hotspot'
+          url: '/gfund/map/insert_hotspot'
           ,success: function(resp, opt) {
             var insert_id = Ext.util.JSON.decode(resp.responseText).insert_id;
             hotspotgrid.getStore().insert(
@@ -239,7 +239,7 @@ Ext.onReady(function() {
               {
                 var con = new Ext.data.Connection();
                 con.request({
-                  url: '/admin/del_hotspot'
+                  url: '/gfund/admin/del_hotspot'
                   ,params: { id: sel.data.id }
                   ,success: function(resp, opt){
                     hotspotgrid.getStore().remove(sel);
@@ -290,7 +290,7 @@ Ext.onReady(function() {
   ]); //eo ds_model_problem
 
   problemStore = new Ext.data.Store({
-    url: '/map/get_problem'
+    url: '/gfund/map/get_problem'
     ,method: 'POST'
     ,reader: new Ext.data.JsonReader({
       root: 'rows'
@@ -330,7 +330,7 @@ Ext.onReady(function() {
         else
           e.field = 'prob_desc';
         con.request({
-          url: '/map/update_problem'
+          url: '/gfund/map/update_problem'
           ,params: {
             id: e.record.data.id
             ,field: e.field
@@ -361,7 +361,7 @@ Ext.onReady(function() {
        ,handler: function() {
         var con = new Ext.data.Connection();
         con.request({
-          url: '/map/insert_problem'
+          url: '/gfund/map/insert_problem'
           ,success: function(resp, opt) {
             var insert_id = Ext.util.JSON.decode(resp.responseText).insert_id;
             problemgrid.getStore().insert(
@@ -403,7 +403,7 @@ Ext.onReady(function() {
               {
                 var con = new Ext.data.Connection();
                 con.request({
-                  url: '/admin/del_problem'
+                  url: '/gfund/admin/del_problem'
                   ,params: { id: sel.data.id }
                   ,success: function(resp, opt){
                     problemgrid.getStore().remove(sel);
@@ -455,7 +455,7 @@ Ext.onReady(function() {
   ]); //eo ds_model_ladmin
 
   ladminStore = new Ext.data.Store({
-    url: '/map/get_ladmin'
+    url: '/gfund/map/get_ladmin'
     ,baseParams: { filter: filter } 
     ,method: 'POST'
     ,reader: new Ext.data.JsonReader({
@@ -505,7 +505,7 @@ Ext.onReady(function() {
         else
           e.field = 'la_name';
         con.request({
-          url: '/map/update_ladmin'
+          url: '/gfund/map/update_ladmin'
           ,params: {
             id: e.record.data.id
             ,field: e.field
@@ -536,7 +536,7 @@ Ext.onReady(function() {
        ,handler: function() {
         var con = new Ext.data.Connection();
         con.request({
-          url: '/map/insert_ladmin'
+          url: '/gfund/map/insert_ladmin'
           ,success: function(resp, opt) {
             var insert_id = Ext.util.JSON.decode(resp.responseText).insert_id;
             ladmingrid.getStore().insert(
@@ -578,7 +578,7 @@ Ext.onReady(function() {
               {
                 var con = new Ext.data.Connection();
                 con.request({
-                  url: '/admin/del_ladmin'
+                  url: '/gfund/admin/del_ladmin'
                   ,params: { id: sel.data.id }
                   ,success: function(resp, opt){
                     ladmingrid.getStore().remove(sel);

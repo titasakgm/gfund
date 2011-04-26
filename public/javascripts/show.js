@@ -1,4 +1,4 @@
-Ext.BLANK_IMAGE_URL = '/mfbase/ext/resources/images/default/s.gif';
+Ext.BLANK_IMAGE_URL = '/gfund/javascripts/mfbase/ext/resources/images/default/s.gif';
 
 Ext.override(Ext.Button, {
     setIcon: function(url){
@@ -145,9 +145,9 @@ Ext.override(Ext.Button, {
 
     var createTileAmphoeLayer = function() {
       amphoe = new OpenLayers.Layer.MapServer("AMPHOE",
-         "http://202.176.91.194/cgi-bin/mapserv",
+         "http://50.56.112.140/cgi-bin/mapserv",
          {
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	       ,layers: 'amphoe'
 	       ,style: ''
            ,format: 'image/png'
@@ -159,9 +159,9 @@ Ext.override(Ext.Button, {
 
     var createTileTambonLayer = function() {
       tambon = new OpenLayers.Layer.MapServer("TAMBON",
-         "http://202.176.91.194/cgi-bin/mapserv",
+         "http://50.56.112.140/cgi-bin/mapserv",
          {
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	       ,layers: 'tambon'
 	       ,style: ''
            ,format: 'image/png'
@@ -175,9 +175,9 @@ Ext.override(Ext.Button, {
 
     var createTileRoadLayer = function() {
       road = new OpenLayers.Layer.MapServer("ROAD",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	       ,layers: 'localroad'
 	       ,style: ''
            ,format: 'image/png'
@@ -190,9 +190,9 @@ Ext.override(Ext.Button, {
 
     var createEducationLayer = function() {
       education = new OpenLayers.Layer.MapServer("EDUCATION",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	      ,layers: 'education'
 	       ,style: ''
            ,format: 'image/png'
@@ -205,9 +205,9 @@ Ext.override(Ext.Button, {
 
     var createHealthLayer = function() {
       health = new OpenLayers.Layer.MapServer("HEALTH",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	       ,layers: 'health'
 	       ,style: ''
            ,format: 'image/png'
@@ -220,9 +220,9 @@ Ext.override(Ext.Button, {
 
     var createReligionLayer = function() {
       religion = new OpenLayers.Layer.MapServer("RELIGION",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	       ,layers: ['temple','church','mosque']
 	       ,style: ''
            ,format: 'image/png'
@@ -235,9 +235,9 @@ Ext.override(Ext.Button, {
 
     var createTempleLayer = function() {
       temple = new OpenLayers.Layer.MapServer("TEMPLE",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	       ,layers: 'temple'
 	       ,style: ''
            ,format: 'image/png'
@@ -249,9 +249,9 @@ Ext.override(Ext.Button, {
 
     var createBankLayer = function() {
       bank = new OpenLayers.Layer.MapServer("BANK",
-         "http://202.176.91.194/cgi-bin/mapserv"
+         "http://50.56.112.140/cgi-bin/mapserv"
          ,{
-           map: '/ms520/map/wms-thai.map'
+           map: '/ms565/map/wms-thai.map'
 	       ,layers: 'bank'
 	       ,style: ''
            ,format: 'image/png'
@@ -421,7 +421,7 @@ Ext.override(Ext.Button, {
         }
 
         var cbLacodeStore = new Ext.data.Store({
-          url: '/map/get_lacode'
+          url: '/gfund/map/get_lacode'
           ,baseParams: { ampcode: ampcode }
           ,reader: new Ext.data.JsonReader({
             root: 'rows'
@@ -442,7 +442,7 @@ Ext.override(Ext.Button, {
           ,buttonAlign: 'center'
           ,autoHeight: true
           ,labelWidth: 75
-          ,url: '/map/save_geom'
+          ,url: '/gfund/map/save_geom'
           ,frame: false
           ,border: false
           ,bodyStyle: 'padding: 5px 5px 0 5px;'
@@ -537,7 +537,7 @@ Ext.override(Ext.Button, {
                   {
                     var con = new Ext.data.Connection();
                     con.request({
-                      url: '/map/delete_lageom'
+                      url: '/gfund/map/delete_lageom'
                       ,params: {
                         xlacode: xlacode
                       }
@@ -592,7 +592,7 @@ Ext.override(Ext.Button, {
           ,buttonAlign: 'center'
           ,autoHeight: true
           ,labelWidth: 75
-          ,url: '/map/save_line'
+          ,url: '/gfund/map/save_line'
           ,frame: false
           ,border: false
           ,bodyStyle: 'padding: 5px 5px 0 5px;'
@@ -669,7 +669,7 @@ Ext.override(Ext.Button, {
                   {
                     var con = new Ext.data.Connection();
                     con.request({
-                      url: '/map/delete_road'
+                      url: '/gfund/map/delete_road'
                       ,params: {
                         xroadid: xroadid
                       }
@@ -721,7 +721,7 @@ Ext.override(Ext.Button, {
         }
 
         var cbLacodeStore = new Ext.data.Store({
-          url: '/map/get_lacode'
+          url: '/gfund/map/get_lacode'
           ,baseParams: { ampcode: ampcode }
           ,reader: new Ext.data.JsonReader({
             root: 'rows'
@@ -762,7 +762,7 @@ Ext.override(Ext.Button, {
           ,buttonAlign: 'center'
           ,autoHeight: true
           ,labelWidth: 75
-          ,url: '/map/add_hotspot'
+          ,url: '/gfund/map/add_hotspot'
           ,baseParams: {
             hot_loc_id: cur_loc_id
           }
@@ -946,7 +946,7 @@ Ext.override(Ext.Button, {
   };
 
   var problemStore = new Ext.data.Store({
-    url: '/map/get_problem'
+    url: '/gfund/map/get_problem'
     ,method: 'POST'
     ,reader: new Ext.data.JsonReader({
       root: 'rows'
@@ -974,7 +974,7 @@ Ext.override(Ext.Button, {
   });
 
   var hotspotStore = new Ext.data.Store({
-    url: '/map/get_hotspot'
+    url: '/gfund/map/get_hotspot'
     ,method: 'POST'
     ,reader: new Ext.data.JsonReader({
       root: 'rows'
@@ -1012,7 +1012,7 @@ Ext.override(Ext.Button, {
 
           var con = new Ext.data.Connection();
           con.request({
-            url: '/map/get_location'
+            url: '/gfund/map/get_location'
             ,params: {
                hotcode: cur_hotcode
                ,extent: box
@@ -1036,7 +1036,7 @@ Ext.override(Ext.Button, {
                 //Add hotspotLayer with icon accoring to loc_code
                 var size = new OpenLayers.Size(30,30);
                 var offset = new OpenLayers.Pixel(-(size.w/2), -(size.h/2));
-                var imgurl = "http://202.176.91.194/ms520/symbols/icon" + info.rows[i].loc_code + ".png";
+                var imgurl = "http://50.56.112.140/ms565/symbols/icon" + info.rows[i].loc_code + ".png";
                 var icon = new OpenLayers.Icon(imgurl,size,offset);
 
                 var lon = info.rows[i].lon;
@@ -1061,7 +1061,7 @@ Ext.override(Ext.Button, {
 
   function showRiskForm (){
     var riskHotStore = new Ext.data.Store({
-      url: '/map/get_location'
+      url: '/gfund/map/get_location'
       ,baseParams: {
         ampcode: ampcode
         ,hotcode: 0 // show all hotspots
@@ -1084,7 +1084,7 @@ Ext.override(Ext.Button, {
     riskHotStore.load();
 
     var cbLacodeStore = new Ext.data.Store({
-      url: '/map/get_lacode'
+      url: '/gfund/map/get_lacode'
       ,baseParams: { ampcode: ampcode }
       ,reader: new Ext.data.JsonReader({
         root: 'rows'
@@ -1110,7 +1110,7 @@ Ext.override(Ext.Button, {
       ,buttonAlign: 'center'
       ,autoHeight: true
       ,labelWidth: 75
-      ,url: '/map/add_risk'
+      ,url: '/gfund/map/add_risk'
       ,baseParams: {
         risk_code: cur_risk_code 
       }
@@ -1266,7 +1266,7 @@ Ext.override(Ext.Button, {
     {
       var con = new Ext.data.Connection();
       con.request({
-        url: '/map/get_riskmap'
+        url: '/gfund/map/get_riskmap'
         ,params: { ampcode: ampcode, riskcode: cur_risk_code, extent: cur_extent }
         ,method: 'POST'
         ,success: function(resp,opt) {
@@ -1327,7 +1327,7 @@ Ext.override(Ext.Button, {
 
             var size = new OpenLayers.Size(45,45);
             var offset = new OpenLayers.Pixel(-(size.w/2), -(size.h/2));
-            var imgurl = "http://202.176.91.194/ms520/symbols/icon" + cur_icontype + ".png";
+            var imgurl = "http://50.56.112.140/ms565/symbols/icon" + cur_icontype + ".png";
 
             var icon = new OpenLayers.Icon(imgurl,size,offset);
             marker = new OpenLayers.Marker( new OpenLayers.LonLat(lon,lat),icon.clone());
@@ -1380,7 +1380,7 @@ Ext.override(Ext.Button, {
         else
           e.field = 'prob_desc';
         con.request({
-          url: '/map/update_problem'
+          url: '/gfund/map/update_problem'
           ,params: {
             id: e.record.data.id
             ,field: e.field
@@ -1462,7 +1462,7 @@ Ext.override(Ext.Button, {
         else
           e.field = 'hot_desc';
         con.request({
-          url: '/map/update_hotspot'
+          url: '/gfund/map/update_hotspot'
           ,params: {
             id: e.record.data.id
             ,field: e.field
@@ -1502,7 +1502,7 @@ Ext.override(Ext.Button, {
   };
 
   var tamcodeStore = new Ext.data.Store({
-    url: '/map/get_tamcode'
+    url: '/gfund/map/get_tamcode'
     ,baseParams: { ampcode: ampcode }
     ,reader: new Ext.data.JsonReader({
       root: 'rows'
@@ -1524,7 +1524,7 @@ Ext.override(Ext.Button, {
         fn: function(sm,index,record){
           var con = new Ext.data.Connection();
           con.request({
-            url: '/map/tamRowSelect'
+            url: '/gfund/map/tamRowSelect'
             ,params: { id: record.data.id }
             ,method: 'POST'
             ,success: function(resp,opt) {
@@ -1569,7 +1569,7 @@ Ext.override(Ext.Button, {
   });
 
   var lacodeStore = new Ext.data.Store({
-    url: '/map/get_lacode'
+    url: '/gfund/map/get_lacode'
     ,baseParams: { ampcode: ampcode }
     ,reader: new Ext.data.JsonReader({
       root: 'rows'
@@ -1597,7 +1597,7 @@ Ext.override(Ext.Button, {
         fn: function(sm,index,record){
           var con = new Ext.data.Connection();
           con.request({
-            url: '/map/ladminRowSelect'
+            url: '/gfund/map/ladminRowSelect'
             ,params: { lacode: record.data.lacode }
             ,method: 'POST'
             ,success: function(resp,opt) {
@@ -1655,7 +1655,7 @@ Ext.override(Ext.Button, {
         new Ext.BoxComponent({
           region: 'north'
           ,el: 'north'
-          ,height: 60
+          ,height: 101
           ,margins: '0 5 0 5'
           ,style:'background-image:url(/images/header.gif);background-repeat:no-repeat;border:solid 1px #1D6241;width:60px;height:100%;'
         }),{
@@ -1758,7 +1758,7 @@ Ext.override(Ext.Button, {
 
     var con = new Ext.data.Connection();
     con.request({
-      url: '/map/search'
+      url: '/gfund/map/search'
       ,method: 'POST'
       ,params: { keyword: keyword }
       ,success: function(resp,opt) {
@@ -2042,7 +2042,7 @@ Ext.override(Ext.Button, {
 
     var deleteFromDatabase = function(id){
       Ext.Ajax.request({
-        url: '/map/hot_delete'
+        url: '/gfund/map/hot_delete'
         ,params: { id: id }
         ,success: function(resp,opt) {
           Ext.Msg.alert('Status', '1 feature deleted from Database!');
@@ -2300,10 +2300,10 @@ Ext.override(Ext.Button, {
             fn: function(node, e){
               var con = new Ext.data.Connection();
               con.request({
-                url: '/map/logout'
+                url: '/gfund/map/logout'
                 ,method: 'POST'
                 ,success: function(resp,opt) {
-                  href = '/user';
+                  href = '/gfund/user';
                   window.location.href=href;
                 } //eo success
               }); //eo request
