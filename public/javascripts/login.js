@@ -49,7 +49,7 @@ Ext.onReady(function(){
               var amphoe = json.user;
               var url = "/gfund/map/show/" + amphoe;
               if (json.user == 'admin')
-                url = "/admin/"
+                url = "/gfund/admin/"
               if (amphoe == 'Invalid')
               {
                 Ext.Msg.alert('Warning', json.msg);
@@ -72,7 +72,7 @@ Ext.onReady(function(){
       ,formBind: false
       ,listeners: {
         click: function(){
-          window.location="/user/profile/";
+          window.location="/gfund/user/profile/";
         } //eo click
       } //eo listeners
     }]

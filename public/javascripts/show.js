@@ -1369,7 +1369,7 @@ Ext.override(Ext.Button, {
          renderer: addImage}
     ]
     ,sm: smProb
-    ,autoExpandColumn: 'prob_desc'
+    //,autoExpandColumn: 'prob_desc'
     ,viewConfig: {forceFit: true}
     ,clicksToEdit: 2
     ,listeners: {
@@ -1545,6 +1545,10 @@ Ext.override(Ext.Button, {
     }
   });
 
+  var tamcode_edit = new Ext.form.TextField();
+  var tamname_edit = new Ext.form.TextField();
+
+
   var tamcodegrid = new Ext.grid.GridPanel({
     frame: false
     ,width: 250
@@ -1553,9 +1557,9 @@ Ext.override(Ext.Button, {
     ,store: tamcodeStore
     ,columns: [
       //new Ext.grid.RowNumberer()
-       {id: 'id', header: 'ID', dataIndex: 'id', width: 50}
-      ,{id: 'tamcode', header: 'Code', dataIndex: 'tamcode', width: 80}
-      ,{id: 'tamname', header: 'Name', dataIndex: 'tamname', width: 120}
+      {id: 'id', header: 'ID', dataIndex: 'id', width: 50}
+      ,{id: 'tamcode', header: 'Code', dataIndex: 'tamcode', width: 80, editor: tamcode_edit}
+      ,{id: 'tamname', header: 'Name', dataIndex: 'tamname', width: 120, editor: tamname_edit}
     ]
     ,sm: sm
     ,autoExpandColumn: 'tamname'
@@ -1638,7 +1642,7 @@ Ext.override(Ext.Button, {
       ,{id: 'laname', header: 'LA Name', dataIndex: 'laname', width: 120}
     ]
     ,sm: smLadmin
-    ,autoExpandColumn: 'laname'
+    //,autoExpandColumn: 'laname'
     ,viewConfig: {forceFit: true}
   }); //eo lacodegrid
 
@@ -1661,7 +1665,7 @@ Ext.override(Ext.Button, {
         }),{
           region: 'west'
           ,title: 'Main Menu'
-          ,width: 250
+          ,width: 350
           ,height: 400
           ,border: false
           ,margins: '5 5 0 5'

@@ -26,7 +26,7 @@ class MapController < ApplicationController
     @user = params[:user]
     @pass = params[:pass]
 
-    logx("login: #{@use}|#{@pass}")    
+    #logx("login: #{@use}|#{@pass}")    
     u = User.find_by_user_id(@user)
     
     if (u.nil?) # First time user not update profile
@@ -703,7 +703,7 @@ class MapController < ApplicationController
     ampcode = params[:ampcode]
 
     if (item == 'ladmin')
-      con = PGconn.connect("localhost",5432,nil,nil,"gfund","postgres")
+      con = PGconn.connect("localhost",5432,nil,nil,"gfund","postgres","1234")
       sql = "SELECT id,la_code,la_name,astext(the_geom) "
       sql += "FROM ladmins "
 
@@ -754,7 +754,7 @@ class MapController < ApplicationController
       data[:geom] = a4.join('|')
       data[:msg] = msg
     elsif (item == 'location')
-      con = PGconn.connect("localhost",5432,nil,nil,"gfund","postgres")
+      con = PGconn.connect("localhost",5432,nil,nil,"gfund","postgres","1234")
       sql = "SELECT the_geom FROM amphoes "
       sql += "WHERE amp_pcode || amp_code = '#{ampcode}' "
       res = con.exec(sql)
