@@ -37,6 +37,9 @@
 <%= javascript_include_tag "/gfund/javascripts/mfbase/mapfish/MapFish.js" %>
 <%= javascript_include_tag "/gfund/javascripts/mfbase/examples.js" %>
 
+<script type="text/javascript" src="/gfund/javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="/gfund/javascripts/jquery.printElement.min.js"></script>
+
 <script type="text/javascript">
   Ext.BLANK_IMAGE_URL = '/gfund/javascripts/mfbase/ext/resources/images/default/s.gif';
 
@@ -2215,6 +2218,7 @@
           }]
         },{
           region: 'center'
+          ,id: 'id_center'
           //,title: 'map'
           ,layout: 'fit'
           ,frame: false
@@ -2433,6 +2437,43 @@
     });
 
     toolbar.add(buttonHelp);
+
+    var buttonPrint = new Ext.Toolbar.Button({
+        iconCls: 'print'
+        ,tooltip: 'Print this map'
+        ,disabled: false
+        ,handler: function(){
+           var o = $("div#id_center");
+           o.printElement({
+             leaveOpen: true
+             ,printMode: 'popup'
+           });
+        }
+    });
+
+    toolbar.add(buttonPrint);
+
+    var printConfigUrl = '/gfund/print/pdf/info.json';
+    var layerOverrides={
+        "AMPHOE": { format: 'image/svg+xml' }
+        ,"TAMBON": { format: 'image/svg+xml' }
+        ,"Hilite": { format: 'image/svg+xml' }
+    };
+
+    var buttonPrint = new mapfish.widgets.print.PrintAction({
+      map: map
+      ,configUrl: printConfigUrl
+      ,overrides: layerOverrides
+      ,fillSpec: function(printCommand){
+        mapfish.widgets.print.PrintAction.prototype.fillSpec.call(this, printCommand);
+ 
+        //our layout needs two fields... hard code them here
+        printCommand.spec.comment = "No comment";
+        printCommand.spec.mapTitle = "PrintControl";
+      }
+    });
+
+    //toolbar.add(buttonPrint);
 
     addSeparator();
                 
@@ -2930,11 +2971,11 @@
       ,init: function() {
         createMap();
 
-	    createTileAmphoeLayer();
+	createTileAmphoeLayer();
 
-	    createTileTambonLayer();
+	createTileTambonLayer();
 
-	    createTileRoadLayer();
+	createTileRoadLayer();
 
         createEducationLayer();
 
@@ -3002,6 +3043,16 @@
         }
         .help {
           background-image:url(/images/help3.png) !important;
+          height:20px !important;
+          width:20px !important;
+        }
+        .help {
+          background-image:url(/images/help3.png) !important;
+          height:20px !important;
+          width:20px !important;
+        }
+        .print {
+          background-image:url(/images/Print.png) !important;
           height:20px !important;
           width:20px !important;
         }
