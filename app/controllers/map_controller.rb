@@ -169,6 +169,7 @@ class MapController < ApplicationController
     limit = params[:limit]
 
     sql = "SELECT * FROM hotspots "
+    sql += "WHERE hot_code > 0 "
     sql += "ORDER BY hot_code "
     totalCount = Ladmin.find_by_sql(sql).size
     if (limit.to_i > 0 && start.to_i >= 0)
@@ -249,6 +250,54 @@ class MapController < ApplicationController
     data[:rows] = @location.collect{|u| {:id=>u.id,
                                          :loc_code=>u.loc_code,
                                          :loc_desc=>u.loc_desc,
+                                         :lon=>u.the_geom.x,
+                                         :lat=>u.the_geom.y} }
+
+    headers["Content-Type"] = "text/plain; charset=utf-8"
+    render :text => data.to_json, :layout => false
+  end
+
+  def get_locations
+    ampcode = params[:ampcode]
+    hotcodes = params[:hotcodes]
+    hcs = hotcodes.split('|')
+    if hcs.length == 1
+      hotcodes = hcs[0]
+    else
+      hotcodes = "'" << hcs.join("','") << "'"
+    end
+    box = params[:extent]
+    if (box.nil?)
+      b = Extent.find(:first, :conditions=> "code = '#{ampcode}'")
+      ext = b.bound.split(',')
+      ext[0] = sprintf("%.3f",ext[0].to_f - 0.005)
+      ext[1] = sprintf("%.3f",ext[1].to_f - 0.005)
+      ext[2] = sprintf("%.3f",ext[2].to_f + 0.005)
+      ext[3] = sprintf("%.3f",ext[3].to_f + 0.005)
+      box = ext.join(',')
+    end
+   
+    e = box.to_s.split(',')
+    extent = "#{e[0]} #{e[1]},#{e[2]} #{e[3]}"
+    sql = "SELECT * FROM locations "
+    sql += "WHERE contains(setSRID('BOX3D(#{extent})'::box3d, 4326), the_geom) "
+    if (hcs.length == 1)
+      sql += "AND loc_code='#{hotcodes}' "
+    else
+        sql += "AND loc_code IN (#{hotcodes}) "
+    end
+
+    log("get_locations:sql=> #{sql}")
+
+    @location = Location.find_by_sql(sql)
+    totalCount = @location.size
+    data = Hash.new
+    data[:success] = 'true'
+    data[:totalCount] = totalCount
+    data[:rows] = @location.collect{|u| {:id=>u.id,
+                                         :loc_code=>u.loc_code,
+                                         :loc_desc=>u.loc_desc,
+                                         :loc_date=>u.loc_date,
                                          :lon=>u.the_geom.x,
                                          :lat=>u.the_geom.y} }
 

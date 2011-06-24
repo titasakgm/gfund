@@ -1261,72 +1261,15 @@
 
   hotspotStore.load();
 
+  var smHotspot2 = new Ext.grid.CheckboxSelectionModel({
+    singleSelect: false
+    ,sortable: false
+    ,checkOnly: true
+  });
+
   var smHotspot = new Ext.grid.RowSelectionModel({
     singleSelect: true
     ,listeners: {
-      rowselect: {
-        fn: function(sm,index,record){
-          cur_hotcode = record.data.hotcode;
-          cur_hotdesc = record.data.hotdesc;
-          var box = map.getExtent().toBBOX();
-
-          //clear all features on hotspotShadow
-          if (hotspotShadow.features)
-            hotspotShadow.removeFeatures(hotspotShadow.features);
-
-          //clear all markers on hotspotLayer
-          hotspotLayer.clearMarkers();
-
-          //remove all popups
-          while (map.popups.length) {
-            map.removePopup(map.popups[0]);
-          }
-          var con = new Ext.data.Connection();
-          con.request({
-            url: '/gfund/map/get_location'
-            ,params: {
-               hotcode: cur_hotcode
-               ,extent: box
-            }
-            ,method: 'POST'
-            ,success: function(resp,opt) {
-              var info = Ext.util.JSON.decode(resp.responseText);
-              var wkt = new OpenLayers.Format.WKT();
-              //Get total features
-              totalCount = parseInt(info.totalCount);
-                 
-              if (totalCount == 0)
-              {
-                Ext.Msg.alert("Warning", "ไม่พบ Hotspot ในขอบเขตปัจจุบัน");
-                return false;
-              }
-
-              //get all features
-              for (var i=0; i<totalCount; i++)
-              {
-                //Add hotspotLayer with icon accoring to loc_code
-                var size = new OpenLayers.Size(20,20);
-                var offset = new OpenLayers.Pixel(-(size.w/2), -(size.h/2));
-                var imgurl = "http://50.56.112.140/ms565/symbols/icon" + info.rows[i].loc_code + ".png";
-                var icon = new OpenLayers.Icon(imgurl,size,offset);
-
-                var lon = info.rows[i].lon;
-                var lat = info.rows[i].lat;
-
-                var feat = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Point(lon,lat),null,style_hotspot);
-                feat.attributes.id = info.rows[i].id;
-                hotspotShadow.addFeatures(feat);
-
-                var marker = createFeatureWithMarker(lon,lat,info.rows[i].loc_desc,icon.clone());
-                hotspotLayer.addMarker(marker);
-              }
-            }
-            ,failure: function(f,a) {
-              Ext.Msg.alert('Warning', 'Server Error');
-            }
-          })
-        }
-      }
     }
   });
 
@@ -1716,18 +1659,92 @@
     ,autoScroll: true
     ,store: hotspotStore
     ,columns: [
+      smHotspot2
       //{id: 'id', header: 'ID', dataIndex: 'id', width: 40}
-      {id: 'hotcode', header: 'Code', dataIndex: 'hotcode', width: 50,
+      ,{id: 'hotcode', header: 'Code', dataIndex: 'hotcode', width: 50,
          editor: hotcode_edit}
       ,{id: 'hotdesc', header: 'Name', dataIndex: 'hotdesc', width: 150, 
-         editor: hotdesc_edit, css: 'white-space: normal !important;'}
+         editor: hotdesc_edit}
     ]
     ,autoExpandColumn: 'hotdesc'
     ,viewConfig: { forceFit: true }
-    ,sm: smHotspot
+    //,sm: smHotspot
+    ,selModel: smHotspot2
     ,clicksToEdit: 2
     ,listeners: {
-      afteredit: function(e) {
+      rowclick: function(grid, index, rec){
+        var box = map.getExtent().toBBOX();
+        var info = grid.getSelectionModel().getSelections();
+
+        //clear all features on hotspotShadow
+        if (hotspotShadow.features)
+          hotspotShadow.removeFeatures(hotspotShadow.features);
+
+        //clear all markers on hotspotLayer
+        hotspotLayer.clearMarkers();
+
+        //remove all popups
+        while (map.popups.length) {
+          map.removePopup(map.popups[0]);
+        }
+
+        if (info.length == 0)
+          return false;
+
+        var hcs = [];
+        for (var i=0; i<info.length; i++){
+          var hc = info[i].data.hotcode;
+          hcs.push(hc);
+        }
+        var hotcodes = hcs.join('|')
+
+        var con = new Ext.data.Connection();
+        con.request({
+          url: '/gfund/map/get_locations'
+          ,params: {
+            hotcodes: hotcodes
+            ,extent: box
+          }
+          ,method: 'POST'
+          ,success: function(resp,opt) {
+            var info = Ext.util.JSON.decode(resp.responseText);
+            var wkt = new OpenLayers.Format.WKT();
+            //Get total features
+            totalCount = parseInt(info.totalCount);
+
+            if (totalCount == 0)
+            {
+              Ext.Msg.alert("Warning", "ไม่พบ Hotspot ในขอบเขตปัจจุบัน");
+              return false;
+            }
+
+            //get all features
+            for (var i=0; i<totalCount; i++)
+            {
+              //Add hotspotLayer with icon accoring to loc_code
+              var size = new OpenLayers.Size(20,20);
+              var offset = new OpenLayers.Pixel(-(size.w/2), -(size.h/2));
+              var imgurl = "http://50.56.112.140/ms565/symbols/icon" + info.rows[i].loc_code + ".png";
+              var icon = new OpenLayers.Icon(imgurl,size,offset);
+
+              var lon = info.rows[i].lon;
+              var lat = info.rows[i].lat;
+
+              var feat = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Point(lon,lat),null,style_hotspot);
+              feat.attributes.id = info.rows[i].id;
+              hotspotShadow.addFeatures(feat);
+
+              var marker = createFeatureWithMarker(lon,lat,info.rows[i].loc_desc,icon.clone());
+              hotspotLayer.addMarker(marker);
+            }
+          }
+          ,failure: function(f,a) {
+            Ext.Msg.alert('Warning', 'Server Error');
+          }
+        }) //eo con.request
+      }
+
+      ,afteredit: function(e) {
         var con = new Ext.data.Connection();
         if (e.field == 'hotcode')
           e.field = 'hotcode';
