@@ -1,8 +1,8 @@
 <title>GFUND: อำเภอ<%= @ampname %></title>
     
-<%= stylesheet_link_tag "/gfund/opl/theme/default/framedCloud.css" %>
-
-<%= javascript_include_tag "/gfund/javascripts/mfbase/openlayers/lib/OpenLayers.js" %>
+<%= stylesheet_link_tag "/gfund/stylesheets/gfund.css" %>
+<%= stylesheet_link_tag "/gfund/stylesheets/framedCloud.css" %>
+<%= javascript_include_tag "/gfund/javascripts/mfbase/openlayers/lib/OpenLayers-Build.js" %>
 
 <style>
   .my-center-button .x-btn-center {
@@ -33,11 +33,10 @@
   // See https://bugzilla.mozilla.org/show_bug.cgi?id=351282
   var gMfLocation = "/gfund/mfbase/mapfish/";
 </script>
-
 <%= javascript_include_tag "/gfund/javascripts/mfbase/mapfish/MapFish.js" %>
-<%= javascript_include_tag "/gfund/javascripts/mfbase/examples.js" %>
+<%= javascript_include_tag  "/gfund/javascripts/mfbase/examples.js" %>
 
-<script type="text/javascript" src="/gfund/javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="/gfund/javascripts/jquery-1.6.1.min.js"></script>
 <script type="text/javascript" src="/gfund/javascripts/jquery.printElement.min.js"></script>
 
 <script type="text/javascript">
@@ -69,14 +68,17 @@
     var saveGeomControl, saveLineControl;
     var selectHotspotControl, selectedHotspot;
     var formPanel, doSearch, selectPopup, popup;
-    var cur_id, cur_lacode, cur_laname, cur_report, cur_geometry, cur_loc_id, cur_loc_code, cur_loc_desc, cur_geom_id;
+    var cur_id, cur_lacode, cur_laname, cur_report, cur_geometry;
+    var cur_loc_id, cur_loc_code, cur_loc_desc, cur_loc_date, cur_geom_id;
     var cur_problemcode, cur_desc, cur_hotcode, cur_hotdesc;
     var cur_query, cur_icontype, cur_extent;
-    var cur_hot_id, cur_risk_code, cur_risk_name, risk_hot_id, risk_hot_code, risk_hot_desc;
+    var cur_hot_id, cur_risk_code, cur_risk_name, risk_hot_id, risk_hot_code;
+    var risk_hot_desc, risk_hot_store;
     var cur_roadid, cur_roadname;
     var cur_item_search = 'ladmin';
     var style_hilite, hilite, style_point, style_line, style_resource;
-    var myData, storeLadmin, storeLocation, searchResultGridLadmin, searchResultGridLocation;
+    var myData, storeLadmin, storeLocation, searchResultGridLadmin;
+    var searchResultGridLocation;
     var amphoe;
     var contentForPopup = new Array();
     var pointFeature = new Array();
@@ -95,6 +97,7 @@
     cur_loc_id = 0;
     cur_loc_code = '';
     cur_loc_desc = '';
+    cur_loc_date = '';
     cur_problemcode = 0;
     cur_hotcode = 0;
     var cur_desc = '';
@@ -474,7 +477,9 @@
         map: map
         ,model: model
         ,showWmsLegend: true
+        ,autoWidth: true
         ,height: 200
+        ,viewConfig: { forceFit: true }
         ,plugins: [
           mapfish.widgets.LayerTree.createContextualMenuPlugin([
             'opacitySlide'
@@ -1031,6 +1036,7 @@
           { name: 'id' }
           ,{ name: 'loccode' }
           ,{ name: 'locdesc' }
+          ,{ name: 'locdate' }
         ]
       });
       storeLocation.loadData(myData);
@@ -1047,6 +1053,8 @@
           { id:'srch_id', header: 'ID', dataIndex: 'id', width: 50 }
           ,{ id:'srch_locdesc', header: 'Loc Desc', dataIndex: 'locdesc', width: 120 }
           ,{id: 'srch_edit', header: '', width: 30, dataIndex: '', renderer: editImage}
+          ,{id: 'srch_loccode', header: '', width: 0, dataIndex: 'loccode'}
+          ,{id: 'srch_locdate', header: '', width: 0, dataIndex: 'locdate'}
         ]
         ,sm: new Ext.grid.RowSelectionModel({
           singleSelect: true
@@ -1055,6 +1063,7 @@
               cur_loc_id = rec.data.id;
               cur_loc_code = rec.data.loccode;
               cur_loc_desc = rec.data.locdesc;
+              cur_loc_date = rec.data.locdate;
               var v = vectorLayer.features;
               //circleFeature(v,id);
               zoomToLadmin(v,id,cur_loc_desc);
@@ -1067,6 +1076,7 @@
             cur_loc_id = data.id;
             cur_loc_code = data.loccode;
             cur_loc_desc = data.locdesc;
+            cur_loc_date = data.locdate;
 
             if (columnIndex == 0)
               Ext.Msg.alert('Info','ID: ' + cur_loc_id);
@@ -1084,6 +1094,7 @@
     }; //eo createSearchResultGridLocation
 
     var showLocForm = function() {
+      var loc_date = new Date(cur_loc_date);
       var locationForm = new Ext.form.FormPanel({
         width: 400
         ,id: 'locationForm'
@@ -1110,10 +1121,10 @@
           ,disabled: true
           ,value: cur_loc_id
         },{
-          xtype: 'textarea'
+          xtype: 'textfield'
           ,id: 'loc_code'
-          ,fieldLabel: 'Code'
           ,name: 'loc_code'
+          ,fieldLabel: 'Location Code'
           ,value: cur_loc_code
         },{
           xtype: 'textarea'
@@ -1127,6 +1138,7 @@
           ,xtype: 'datefield'
           ,fieldLabel: 'Date'
           ,format: 'Y-m-d'
+          ,value: loc_date
         }] // eof items
         ,buttons: [{
           text:'Save'
@@ -1293,7 +1305,7 @@
               for (var i=0; i<totalCount; i++)
               {
                 //Add hotspotLayer with icon accoring to loc_code
-                var size = new OpenLayers.Size(30,30);
+                var size = new OpenLayers.Size(20,20);
                 var offset = new OpenLayers.Pixel(-(size.w/2), -(size.h/2));
                 var imgurl = "http://50.56.112.140/ms565/symbols/icon" + info.rows[i].loc_code + ".png";
                 var icon = new OpenLayers.Icon(imgurl,size,offset);
@@ -1317,8 +1329,6 @@
       }
     }
   });
-
-
 
   function showRiskForm (){
     var riskHotStore = new Ext.data.Store({
@@ -1391,7 +1401,7 @@
         ,disabled: false
         ,value: cur_hot_id
       },{
-        xtype:'combo'
+        xtype: 'combo'
         ,id: 'risk_hot_code'
         ,name: 'risk_hot_code'
         ,hiddenName: 'loc_code'
@@ -1607,8 +1617,8 @@
 
   var ds_model_prob = new Ext.data.Record.create([
     'id'
-    ,'prob_code'
-    ,'prob_desc'
+    ,'probcode'
+    ,'probdesc'
   ]); //eo ds_model_prob
 
   var addImage = function(){
@@ -1618,28 +1628,28 @@
   var problemgrid = new Ext.grid.EditorGridPanel({
     frame: false
     ,id: 'problemGrid'
-    ,width: 250
+    ,autoWidth: true
     ,height: 200
     ,autoScroll: true
     ,store: problemStore
     ,columns: [
       //{id: 'id', header: 'ID', dataIndex: 'id', width: 40}
-      {id: 'prob_code', header: 'Code', dataIndex: 'probcode', width: 50, editor: probcode_edit}
-      ,{id: 'prob_desc', header: 'Name', dataIndex: 'probdesc', width: 150, editor: probdesc_edit}
-      ,{id: 'prob_add', header: '', width: 30, dataIndex: '', 
-         renderer: addImage}
+      {id: 'probcode', header: 'Code', dataIndex: 'probcode', width: 50, editor: probcode_edit}
+      ,{id: 'probdesc', header: 'Name', dataIndex: 'probdesc', width: 130, 
+        editor: probdesc_edit}
+      ,{id: 'probadd', header: '', width: 30, dataIndex: '', renderer: addImage}
     ]
+    ,autoExpandColumn: 'probdesc'
+    ,viewConfig: { forceFit: true }
     ,sm: smProb
-    ,autoExpandColumn: 'prob_desc'
-    ,viewConfig: {forceFit: true}
     ,clicksToEdit: 2
     ,listeners: {
       afteredit: function(e) {
         var con = new Ext.data.Connection();
         if (e.field == 'probcode')
-          e.field = 'prob_code';
+          e.field = 'probcode';
         else
-          e.field = 'prob_desc';
+          e.field = 'probdesc';
         con.request({
           url: '/gfund/map/update_problem'
           ,params: {
@@ -1694,33 +1704,35 @@
 
   var ds_model_hotspot = new Ext.data.Record.create([
     'id'
-    ,'hot_code'
-    ,'hot_desc'
+    ,'hotcode'
+    ,'hotdesc'
   ]); //eo ds_model_hotspot
 
   var hotspotgrid = new Ext.grid.EditorGridPanel({
     frame: false
     ,id: 'hotspotGrid'
-    ,width: 250
-    ,height: 300
+    ,autoWidth: true
+    ,height: 200
     ,autoScroll: true
     ,store: hotspotStore
     ,columns: [
       //{id: 'id', header: 'ID', dataIndex: 'id', width: 40}
-      {id: 'hot_code', header: 'Code', dataIndex: 'hotcode', width: 50, editor: hotcode_edit}
-      ,{id: 'hot_desc', header: 'Name', dataIndex: 'hotdesc', width: 150, editor: hotdesc_edit}
+      {id: 'hotcode', header: 'Code', dataIndex: 'hotcode', width: 50,
+         editor: hotcode_edit}
+      ,{id: 'hotdesc', header: 'Name', dataIndex: 'hotdesc', width: 150, 
+         editor: hotdesc_edit, css: 'white-space: normal !important;'}
     ]
-    ,sm: smHotspot
     ,autoExpandColumn: 'hotdesc'
-    ,viewConfig: {forceFit: true}
+    ,viewConfig: { forceFit: true }
+    ,sm: smHotspot
     ,clicksToEdit: 2
     ,listeners: {
       afteredit: function(e) {
         var con = new Ext.data.Connection();
         if (e.field == 'hotcode')
-          e.field = 'hot_code';
+          e.field = 'hotcode';
         else
-          e.field = 'hot_desc';
+          e.field = 'hotdesc';
         con.request({
           url: '/gfund/map/update_hotspot'
           ,params: {
@@ -1808,7 +1820,7 @@
   var tamcodegrid = new Ext.grid.GridPanel({
     frame: false
     ,autoWidth: true
-    ,height: 300
+    ,height: 400
     ,autoScroll: true
     ,store: tamcodeStore
     ,columns: [
@@ -1817,16 +1829,10 @@
       ,{id: 'tamcode', header: 'Code', dataIndex: 'tamcode', width: 80}
       ,{id: 'tamname', header: 'Name', dataIndex: 'tamname', width: 120}
     ]
-    ,sm: sm
     ,autoExpandColumn: 'tamname'
-    ,viewConfig: {forceFit: true}
+    ,viewConfig: { forceFit: true }
+    ,sm: sm
   }); //eo tamcodegrid
-
-  var panel_tamcode = new Ext.Panel({
-    id: 'panel_tamcode'
-    ,layout: 'fit'
-    ,items: [ tamcodegrid ]
-  });
 
   var lacodeStore = new Ext.data.Store({
     url: '/gfund/map/get_lacode'
@@ -1886,7 +1892,7 @@
   var lacodegrid = new Ext.grid.GridPanel({
     frame: false
     ,autoWidth: true
-    ,height: 300
+    ,height: 200
     ,autoScroll: true
     ,store: lacodeStore
     ,columns: [
@@ -1895,16 +1901,10 @@
       ,{id: 'lacode', header: 'LA Code', dataIndex: 'lacode', width: 80}
       ,{id: 'laname', header: 'LA Name', dataIndex: 'laname', width: 120}
     ]
-    ,sm: smLadmin
     ,autoExpandColumn: 'laname'
-    ,viewConfig: {forceFit: true}
+    ,viewConfig: { forceFit: true }
+    ,sm: smLadmin
   }); //eo lacodegrid
-
-  var panel_lacode = new Ext.Panel({
-    id: 'panel_lacode'
-    ,layout: 'fit'
-    ,items: [ lacodegrid ]
-  });
 
   var lacodeMonitorStore = new Ext.data.Store({
     url: '/gfund/map/get_lacodemon'
@@ -2074,8 +2074,8 @@
 
   var lacodemongrid = new Ext.grid.GridPanel({
     frame: false
-    ,width: 250
-    ,height: 300
+    ,autoWidth: true
+    ,height: 400
     ,autoScroll: true
     ,store: lacodeMonitorStore
     ,columns: [
@@ -2116,12 +2116,6 @@
     }
   }); //eo lacodemongrid
 
-  var panel_lacodemon = new Ext.Panel({
-    id: 'panel_lacodemon'
-    ,layout: 'fit'
-    ,items: [ lacodemongrid ]
-  });
-
   var createViewport = function() {
     viewport = new Ext.Viewport({
       layout: 'border'
@@ -2129,13 +2123,13 @@
         new Ext.BoxComponent({
           region: 'north'
           ,el: 'north'
-          ,height: 60
+          ,height: 0
           ,margins: '0 5 0 5'
           ,style:'background-image:url(/images/header.gif);background-repeat:no-repeat;border:solid 1px #1D6241;'
         }),{
           region: 'west'
           ,title: 'Main Menu'
-          ,width: 200
+          ,width: 300
           ,height: 400
           ,border: false
           ,margins: '5 5 0 5'
@@ -2147,7 +2141,8 @@
           ,items: [{
             id: 'acc-1'
             ,title: 'Layer Tree'
-            ,items: [tree]
+            ,layout: 'fit'
+            ,items: [ tree ]
             ,listeners: {
               "beforeexpand": function(p) {
                 //Collapse id-chart
@@ -2158,7 +2153,8 @@
           },{
             id: 'acc-2'
             ,title: 'รหัสตำบล'
-            ,items: panel_tamcode
+            ,layout: 'fit'
+            ,items: [ tamcodegrid ]
             ,listeners: {
               "beforeexpand": function(p) {
                 //Collapse id-chart
@@ -2169,7 +2165,8 @@
           },{
             id: 'acc-3'
             ,title: 'รหัสอปท.'
-            ,items: panel_lacode
+            ,layout: 'fit'
+            ,items: [ lacodegrid ]
             ,listeners: {
               "beforeexpand": function(p) {
                 //Collapse id-chart
@@ -2180,6 +2177,7 @@
           },{
             id: 'acc-4'
             ,title: 'Search Result'
+            ,layout: 'fit'
             ,items: [ searchResultGridLadmin, searchResultGridLocation ]
             ,listeners: {
               "beforeexpand": function(p) {
@@ -2191,6 +2189,7 @@
           },{
             id: 'acc-5'
             ,title: 'พฤติกรรมเสี่ยง'
+            ,layout: 'fit'
             ,items: [ problemgrid ]
             ,listeners: {
               "beforeexpand": function(p) {
@@ -2202,6 +2201,7 @@
           },{
             id: 'acc-6'
             ,title: 'Hotspot List'
+            ,layout: 'fit'
             ,items: [ hotspotgrid ]
             ,autoScroll: true
             ,listeners: {
@@ -2214,7 +2214,7 @@
           },{
             id: 'acc-7'
             ,title: 'Monitoring Progress/Resource'
-            ,items: [ panel_lacodemon ]
+            ,items: [ lacodemongrid ]
           }]
         },{
           region: 'center'
@@ -2363,6 +2363,7 @@
           var s_id = info.id.split('|');
           var s_loccode = info.loccode.split('|');
           var s_locdesc = info.locdesc.split('|');
+          var s_locdate = info.locdate.split('|');
           var s_geom = info.geom.split('|');
           var s_msg = info.msg;
           var s_totalCount = info.totalCount;
@@ -2377,9 +2378,11 @@
             feature.id = s_id[i];
             feature.loccode = s_loccode[i];
             feature.locdesc = s_locdesc[i];
+            feature.locdate = s_locdate[i];
+            feature.geom = s_geom[i];
             vectorLayer.addFeatures(feature);
             lonlat = feature.geometry.getBounds().getCenterLonLat();
-            rec[i] = [feature.id,feature.loccode,feature.locdesc];
+            rec[i] = [feature.id,feature.loccode,feature.locdesc,feature.locdate,feature.geom];
           }
 
           myData = rec;
@@ -2444,10 +2447,24 @@
         ,disabled: false
         ,handler: function(){
            var o = $("div#id_center");
+           var oldw = o.width;
+           var oldh = o.height;
+           o.width = screen.width;
+           o.height = screen.height;
+           o.prepend('<div id="xx"><center><h1><%= @ampname %></h1></center></div>');
+	   toolbar.hide();
            o.printElement({
              leaveOpen: true
              ,printMode: 'popup'
            });
+           o.width = oldw;
+           o.height = oldh;
+           $('#xx').remove();
+	   toolbar.show();
+           //if (!o.hasClass('fullscreen')) {
+             //o.addClass('fullscreen');
+             //window.scroll(0,0);
+           //}
         }
     });
 
@@ -2501,6 +2518,7 @@
                     isDefault: true,
                     title: 'Pan map: keep the left mouse button pressed and drag the map'
                 }), {
+                    id: 'tb_pan',
                     iconCls: 'pan',
                     toggleGroup: 'map'
                 }
@@ -2660,7 +2678,7 @@
       ,toggleGroup: 'map'
     });
 
-	toolbar.addControl(selectPopup, {
+    toolbar.addControl(selectPopup, {
       iconCls: 'popupfeature'
       ,toggleGroup: 'map'
     });
@@ -2681,15 +2699,55 @@
     };
 
     var featureRemove = function(feature) {
-      var x = confirm("Delete Hotspot ID:" + feature.attributes.id + " from Database?");
-      if (x==true) {
-        hotspotShadow.removeFeatures(feature);
-        var l = hotspotShadow.features.length;
-        var msg = (l==1) ? 'There is one feature on map' : 'There are now ' + l + ' features on map';
-        //delete this feature from database
-        deleteFromDatabase(feature.attributes.id);
-        toolbarExample.app.setStatus(msg);
-      }
+      Ext.MessageBox.buttonText.yes = 'Edit';
+      Ext.MessageBox.buttonText.no = 'Delete';
+      Ext.Msg.show({
+        title: 'Edit / Delete a Hotspot'
+        ,msg: 'Please select Action'
+        ,buttons: {
+          yes: true
+          ,no: true
+          ,cancel: true
+        }
+        ,fn: function(btn){
+          if (btn == 'yes')
+          {
+            var id = feature.attributes.id;
+            Ext.Ajax.request({
+              url: '/gfund/map/loc_info'
+              ,params: { id: id }
+              ,success: function(resp,opt) {
+                var info = Ext.util.JSON.decode(resp.responseText);
+                cur_loc_id = info.rows.id;
+                cur_loc_code = info.rows.loccode;
+                cur_loc_desc = info.rows.locdesc;
+                cur_loc_date = info.rows.locdate;
+                cur_loc_geom = info.rows.geom;
+                showLocForm();
+              }
+              ,failure: function(resp, opt) {
+                var info = Ext.util.JSON.decode(resp.responseText);
+                Ext.Msg.alert('Warning', 'Fail to edit feature');
+              }
+            });
+          }
+          else if (btn == 'no')
+          {
+            var x = confirm("Delete Hotspot ID:" + feature.attributes.id + " from Database?");
+            if (x == true)
+            {
+              hotspotShadow.removeFeatures(feature);
+              var l = hotspotShadow.features.length;
+              var msg = (l==1) ? 'There is one feature on map' : 'There are now ' + l + ' features on map';
+              //delete this feature from database
+              deleteFromDatabase(feature.attributes.id);
+              toolbarExample.app.setStatus(msg);
+            }
+          }
+          else
+            return false;
+        } 
+      });
     };
 
     var removeOptions = {
@@ -2792,9 +2850,9 @@
         {
           hilite.removeFeatures(hilite.features);
         }
-        if (selectedFeature && selectedFeature.popup)
-        {
-          map.removePopup(selectedFeature.popup);
+        //remove all popups
+        while (map.popups.length) {
+          map.removePopup(map.popups[0]);
         }
 
         //clear all features on hotspotShadow
@@ -2821,6 +2879,9 @@
         //Hide both searchResultGrids
         Ext.get('search-result-grid-ladmin').enableDisplayMode().hide();
         Ext.get('search-result-grid-location').enableDisplayMode().hide();
+
+        //Toggle Toolbar Button for PAN
+        Ext.getCmp('tb_pan').toggle();
       }
     });
 

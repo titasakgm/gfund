@@ -454,7 +454,7 @@ class MapController < ApplicationController
     date = params[:loc_date]
 
     loc = Location.find(id)
-    loc.update_attributes(:loc_code => code, :loc_desc => desc)
+    loc.update_attributes(:loc_code => code, :loc_desc => desc, :loc_date => date)
 
     data = Hash.new
     data[:success] = 'true'
@@ -760,7 +760,7 @@ class MapController < ApplicationController
       res = con.exec(sql)
       ampgeom = res[0][0]
 
-      sql = "SELECT id,loc_code,loc_desc,astext(the_geom) "
+      sql = "SELECT id,loc_code,loc_desc,astext(the_geom),loc_date "
       sql += "FROM locations "
 
       if (keyword =~ /POLYGON/)
@@ -778,6 +778,7 @@ class MapController < ApplicationController
       a2 = Array.new
       a3 = Array.new
       a4 = Array.new
+      a5 = Array.new
 
       msg = "Sorry, no record found"
 
@@ -794,10 +795,12 @@ class MapController < ApplicationController
           loccode = rec[1]
           locdesc = rec[2]
           geom = rec[3]
+          locdate = rec[4]
           a1.push(id)
           a2.push(loccode)
           a3.push(locdesc)
           a4.push(geom)
+          a5.push(locdate)
         end
       end
 
@@ -809,6 +812,7 @@ class MapController < ApplicationController
       data[:loccode] = a2.join('|')
       data[:locdesc] = a3.join('|')
       data[:geom] = a4.join('|')
+      data[:locdate] = a5.join('|')
       data[:msg] = msg
     end
 
@@ -824,6 +828,31 @@ class MapController < ApplicationController
     else
       data = { :success => 'false', :msg => 'Delete failed!' }
     end
+
+    headers["Content-Type"] = "text/plain; charset=utf-8"
+    render :text => data.to_json, :layout => false
+  end
+
+  def loc_info
+    id = params[:id]
+    con = PGconn.connect("localhost",5432,nil,nil,"gfund","postgres","1234")
+    sql = "SELECT loc_code,loc_desc,astext(the_geom),loc_date "
+    sql += "FROM locations "
+    sql += "WHERE id=#{id} "
+    res = con.exec(sql)
+    con.close
+    loccode = locdesc = geom = locdate = nil
+    res.each do |rec|
+      loccode = rec[0]
+      locdesc = rec[1]
+      geom = rec[2]
+      locdate = rec[3]
+    end
+
+    data = Hash.new
+    data[:success] = true
+    data[:totalCount] = 1
+    data[:rows] = {:id=>id,:loccode=>loccode,:locdesc=>locdesc,:geom=>geom,:locdate=>locdate}
 
     headers["Content-Type"] = "text/plain; charset=utf-8"
     render :text => data.to_json, :layout => false

@@ -11,3 +11,19 @@
 .ext-chrome .x-date-picker {
     width: 185px;
 }
+.fullscreen {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  margin: 0;
+  padding: 0;
+  background: inherit;
+}
+
+.x-grid3-cell-inner, .x-grid3-hd-inner { 
+  white-space: normal;
+}
