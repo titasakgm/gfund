@@ -282,7 +282,11 @@ class MapController < ApplicationController
     sql = "SELECT * FROM locations "
     sql += "WHERE contains(setSRID('BOX3D(#{extent})'::box3d, 4326), the_geom) "
     if (hcs.length == 1)
-      sql += "AND loc_code='#{hotcodes}' "
+      if (hotcodes == '1')
+        sql += "AND loc_code > 1 "
+      else
+        sql += "AND loc_code='#{hotcodes}' "
+      end
     else
         sql += "AND loc_code IN (#{hotcodes}) "
     end
